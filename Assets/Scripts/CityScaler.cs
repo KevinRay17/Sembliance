@@ -14,7 +14,7 @@ public class CityScaler : MonoBehaviour
     void Start()
     {
         child = transform.GetChild(0).gameObject;
-        Speed = 100;
+        Speed = 90;
     }
 
     // Update is called once per frame
