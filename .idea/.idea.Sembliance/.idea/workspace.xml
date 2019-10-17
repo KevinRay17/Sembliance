@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="8afbd780-711e-44bb-a67e-40bfc702b82b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/CustomRTTemplates.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDSRPTemplates.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/LWSRPTemplates.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/PPStackTemplates.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/SRP (Legacy)/HDSRPTemplates 3xx (Legacy).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/SRP (Legacy)/HDSRPTemplates 4xx (Legacy).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/SRP (Legacy)/HDSRPTemplates 572 (Legacy).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/SRP (Legacy)/HDSRPTemplates 5xx (Legacy).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/SRP (Legacy)/LWSRPTemplates 3xx (Legacy).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/SRP (Legacy)/LWSRPTemplates 4xx (Legacy).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CityScaler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CityScaler.cs" afterDir="false" />
+=======
     <list default="true" id="301f333a-0073-40f8-861c-f076bffb8285" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimatedText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AnimatedText.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CityScaler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CityScaler.cs" afterDir="false" />
@@ -9,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Footprint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Footprint.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SunIntensity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SunIntensity.cs" afterDir="false" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +32,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
+<<<<<<< HEAD
+    <session id="456217911">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="1" />
+=======
     <session id="-1435078968">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
@@ -34,21 +56,47 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="C#" value="7" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
+          <entry key="cs" value="11" />
+=======
           <entry key="cs" value="2014" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
+          <entry key="C#" value="11" />
+=======
           <entry key="C#" value="2014" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/CityScaler.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <folding>
+                <marker date="1571270162027" expanded="false" signature="6:78" ph="..." />
+                <marker date="1571270162027" expanded="true" signature="119:1426" ph="{...}" />
+                <marker date="1571270162027" expanded="true" signature="303:385" ph="{...}" />
+                <marker date="1571270162027" expanded="true" signature="443:1421" ph="{...}" />
+                <marker date="1571270162027" expanded="true" signature="490:743" ph="{...}" />
+                <marker date="1571270162027" expanded="true" signature="527:733" ph="{...}" />
+                <marker date="1571270162027" expanded="true" signature="1118:1167" ph="{...}" />
+                <marker date="1571270162027" expanded="true" signature="1366:1415" ph="{...}" />
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controller.cs">
@@ -227,6 +275,7 @@
                 <marker date="1571293680130" expanded="true" signature="688:895" ph="{...}" />
                 <marker date="1571293680130" expanded="true" signature="1322:1371" ph="{...}" />
                 <marker date="1571293680130" expanded="true" signature="1570:1619" ph="{...}" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
               </folding>
             </state>
           </provider>
@@ -238,6 +287,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+<<<<<<< HEAD
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CityScaler.cs" root0="FORCE_HIGHLIGHTING" />
+=======
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeadBobber.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SunIntensity.cs" root0="FORCE_HIGHLIGHTING" />
@@ -246,16 +298,20 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Footprint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AnimatedText.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CitySwap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimatedText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Footprint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SunIntensity.cs" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
         <option value="$PROJECT_DIR$/Assets/Scripts/CityScaler.cs" />
       </list>
     </option>
@@ -266,21 +322,36 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-18" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="745" />
+=======
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="3720" />
     <option name="y" value="370" />
     <option name="width" value="1550" />
     <option name="height" value="838" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
   </component>
   <component name="ProjectView">
     <navigator currentView="UnityExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+=======
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
       <pane id="FileSystemExplorer" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
       </pane>
@@ -324,6 +395,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="8afbd780-711e-44bb-a67e-40bfc702b82b" name="Default Changelist" comment="" />
+      <created>1571269010083</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571269010083</updated>
+      <workItem from="1571269016234" duration="423000" />
+=======
       <changelist id="301f333a-0073-40f8-861c-f076bffb8285" name="Default Changelist" comment="" />
       <created>1570832439801</created>
       <option name="number" value="Default" />
@@ -332,11 +411,16 @@
       <workItem from="1570832441763" duration="2684000" />
       <workItem from="1571203295345" duration="2603000" />
       <workItem from="1571289746140" duration="3491000" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="423000" />
+=======
     <option name="totallyTimeSpent" value="8778000" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -348,12 +432,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="-18" y="23" width="1440" height="745" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+=======
     <frame x="2554" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -361,6 +462,13 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+=======
       <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
@@ -375,6 +483,7 @@
       <window_info anchor="right" id="Errors In Solution" order="3" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,6 +494,32 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+<<<<<<< HEAD
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CityScaler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <marker date="1571270162027" expanded="false" signature="6:78" ph="..." />
+            <marker date="1571270162027" expanded="true" signature="119:1426" ph="{...}" />
+            <marker date="1571270162027" expanded="true" signature="303:385" ph="{...}" />
+            <marker date="1571270162027" expanded="true" signature="443:1421" ph="{...}" />
+            <marker date="1571270162027" expanded="true" signature="490:743" ph="{...}" />
+            <marker date="1571270162027" expanded="true" signature="527:733" ph="{...}" />
+            <marker date="1571270162027" expanded="true" signature="1118:1167" ph="{...}" />
+            <marker date="1571270162027" expanded="true" signature="1366:1415" ph="{...}" />
+=======
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controller.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -548,6 +683,7 @@
             <marker date="1571293680130" expanded="true" signature="688:895" ph="{...}" />
             <marker date="1571293680130" expanded="true" signature="1322:1371" ph="{...}" />
             <marker date="1571293680130" expanded="true" signature="1570:1619" ph="{...}" />
+>>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
           </folding>
         </state>
       </provider>
