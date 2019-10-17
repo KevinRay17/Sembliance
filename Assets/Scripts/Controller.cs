@@ -36,6 +36,8 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        //Get Inputs and move using Translation
         float translation = Input.GetAxis("Vertical") * speed;
         float strafe = Input.GetAxis("Horizontal") * speed;
         translation *= Time.deltaTime;
@@ -43,11 +45,8 @@ public class Controller : MonoBehaviour
         //if (CitySwap.OnWhite)
         transform.Translate(strafe, 0, translation);
         
-        //else
-        //{
-          //  transform.Translate(strafe, 0, -translation);  
-        //}
-
+      
+        //Jump Force in opposite of ground, Start Timer to prevent cast detection after jump
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             if (CitySwap.OnWhite)
@@ -61,7 +60,7 @@ public class Controller : MonoBehaviour
             StartCoroutine(JumpWait());
         }
         
-        
+        //Raycast for gravity tile for infinity downwards. double and undouble gravity
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, Mathf.Infinity)){
 
@@ -77,7 +76,7 @@ public class Controller : MonoBehaviour
                 gravChanged = false;
             }
         }
-
+        //If distance from ground is more than ten start game
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit,
                 10))
         {
@@ -92,7 +91,7 @@ public class Controller : MonoBehaviour
         }
 
 
-
+        //Raycast for speed tile, reset immediately if not hitting speedtile
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, (transform.localScale.y + .1f)) && hit.transform.gameObject.CompareTag("SpeedTile"))
         {
             speed = 15;
@@ -101,24 +100,25 @@ public class Controller : MonoBehaviour
         {
             speed = 5;
         }
-        
+        //Raycast and check if you're already grounded and wait for jumpWait to prevent double jumping. Start placing decals
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, (transform.localScale.y + .1f), layerMask) && jumpWaited && !grounded)
         {
             StartCoroutine(PlaceFeet());
             grounded = true;
         }
-
+        //Unlock Cursor
         if (Input.GetKeyDown("escape"))
             Cursor.lockState = CursorLockMode.None;
     }
 
+    //Short wait to prevent raycast from double grounding
     IEnumerator JumpWait()
     {
      yield return new WaitForSeconds(.25f);
         jumpWaited = true;
     }
 
-
+    //if you fall you die. Will change to coroutine with effects and sounds
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("DeadZone"))
@@ -131,6 +131,8 @@ public class Controller : MonoBehaviour
     {
         if (grounded)
         {
+            
+            //If you are on the ground and the city above you collides with you. Die
             if (CitySwap.OnWhite && other.gameObject.CompareTag("CityBlack"))
             {
                 Restart();
@@ -142,6 +144,7 @@ public class Controller : MonoBehaviour
         }
     }
 
+    //Reset Statics
     void Restart()
     {
         CitySwap.OnWhite = true;
@@ -152,14 +155,14 @@ public class Controller : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    //Check ground for which foot type to place and continue placing while grounded
     IEnumerator PlaceFeet()
     {
         int foot = 1;
         yield return 0;
-        Debug.Log("here");
         while (grounded)
         {
-            Debug.Log("nowhere");
+            
             RaycastHit hit;
             
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit,
@@ -201,6 +204,7 @@ public class Controller : MonoBehaviour
                 }
                
             }
+            //Wait this long until next foot placed. Need change to distance travelled
             yield return new WaitForSeconds(.25f);
         }
         yield return 0;
