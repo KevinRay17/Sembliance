@@ -22,7 +22,7 @@ public class CitySwap : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        //Teleport
+        //Teleport, raycast direct above and switch sides but player moves right above ground to help maintain momentum without grounding
         if (Input.GetMouseButtonDown(0))
         {
             
