@@ -32,16 +32,16 @@ public class CitySwap : MonoBehaviour
                 Physics.gravity = new Vector3(0, Physics.gravity.y * -1, 0);
                 OnWhite = !OnWhite;
                 StartCoroutine(PARTICLES());
-                if (Controller.instance.grounded)
-                transform.position = hit.point;
-                else
-                {
+                //if (Controller.instance.grounded)
+                //transform.position = hit.point;
+                //else
+                //{
                     if (OnWhite)
                     transform.position = hit.point + new Vector3(0, 1.5f, 0);
                     else
                     {
                         transform.position = hit.point + new Vector3(0, -1.5f, 0);
-                    }
+                  //  }
                 }
                 
             }
