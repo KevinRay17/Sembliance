@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CityScaler : MonoBehaviour
 {
+    //Scale parents so that children increase in size from their base
     public float Speed;
 
     private bool collided;
@@ -14,22 +15,24 @@ public class CityScaler : MonoBehaviour
     void Start()
     {
         child = transform.GetChild(0).gameObject;
-        Speed = 75;
+        Speed = 90;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Scale increases and speed decreases on negative curve until min speed is reached
         if (Controller.instance.started)
         {
             if (!collided)
             {
                 gameObject.transform.localScale += new Vector3(0, .001f * Speed * Time.deltaTime, 0);
-                if (Speed > 5)
+                if (Speed > 20)
                     Speed -= Time.deltaTime;
             }
         }
 
+        // if city collides, stop scaling
         RaycastHit hit;
         Debug.DrawRay(child.transform.position, transform.TransformDirection(Vector3.up) * transform.localScale.y*5,
             Color.yellow);

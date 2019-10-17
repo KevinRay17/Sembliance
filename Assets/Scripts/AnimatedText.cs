@@ -11,6 +11,7 @@ public class AnimatedText : MonoBehaviour
 
     void Start()
     {
+        //Write whatever after Animate Text for next statement
         StartCoroutine(AnimateText("Simulation Complete"));
     }
 
@@ -22,8 +23,8 @@ public class AnimatedText : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
-
-
+    
+    //Write new letter every .1 seconds and start next coroutine
     IEnumerator AnimateText(string strComplete)
     {
         int i = 0;
