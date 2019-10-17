@@ -26,6 +26,9 @@ public class MouseLook : MonoBehaviour {
         smoothV.y = Mathf.Lerp (smoothV.y, md.y, 1f / smoothing);
         mouseLook += smoothV;
         mouseLook.y = Mathf.Clamp(mouseLook.y, -90f, 90f);      
+       
+        
+        //Invert mouslook x and rotation when on ceiling
         if (CitySwap.OnWhite)
         {
             transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
