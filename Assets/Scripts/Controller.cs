@@ -12,11 +12,15 @@ public class Controller : MonoBehaviour
     int layerMask = 1 << 10;
     public bool grounded = true;
     private bool jumpWaited = true;
+    public bool moveTile = false;
+    public float speedTile;
 
     public GameObject LeftW;
     public GameObject LeftB;
     public GameObject RightW;
     public GameObject RightB;
+
+    public GameObject moveTileBlock;
 
     private Rigidbody rb;
 
@@ -49,6 +53,7 @@ public class Controller : MonoBehaviour
         //Jump Force in opposite of ground, Start Timer to prevent cast detection after jump
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
+            moveTile = false;
             if (CitySwap.OnWhite)
             rb.AddForce(new Vector3(0,7f,0), ForceMode.Impulse);
             else
@@ -58,6 +63,12 @@ public class Controller : MonoBehaviour
             grounded = false;
             jumpWaited = false;
             StartCoroutine(JumpWait());
+        }
+
+        if (moveTile == true)
+        {
+            moveTileBlock.transform.position += Vector3.forward * 0.1f;
+            transform.position += Vector3.forward * 0.1f;
         }
         
         //Raycast for gravity tile for infinity downwards. double and undouble gravity
@@ -129,6 +140,18 @@ public class Controller : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if (other.gameObject.tag.Equals("MoveTile"))
+        {
+            Debug.Log("MoveTile");
+            this.moveTile = true;
+        }
+        if (other.gameObject.tag.Equals("StopMove"))
+        {
+            moveTile = false;
+            Destroy(moveTileBlock);
+            Destroy(other.gameObject);
+            rb.AddForce(new Vector3(0,0,12f), ForceMode.Impulse);
+        }
         if (grounded)
         {
             
