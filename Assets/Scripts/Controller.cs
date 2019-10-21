@@ -149,7 +149,7 @@ public class Controller : MonoBehaviour
         {
             Physics.gravity = new Vector3(0,Physics.gravity.y * -1,0);
         }
-        SceneManager.LoadScene(0);
+        Application.LoadLevel(Application.loadedLevel);
     }
 
     /*IEnumerator PlaceFeet()
