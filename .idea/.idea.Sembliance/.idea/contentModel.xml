@@ -717,9 +717,14 @@
           <e p="DontDestroy.cs" t="Include" />
           <e p="Footprint.cs" t="Include" />
           <e p="HeadBobber.cs" t="Include" />
+          <e p="Level1Instructions.cs" t="Include" />
           <e p="MouseLook.cs" t="Include" />
+
+          <e p="StartAnimatedText.cs" t="Include" />
+
           <e p="moveBlock.cs" t="Include" />
           <e p="moveBlockCollision.cs" t="Include" />
+
           <e p="SunIntensity.cs" t="Include" />
         </e>
       </e>
