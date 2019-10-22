@@ -7,21 +7,25 @@ public class moveBlockCollision : MonoBehaviour
     public GameObject moveTileBlock;
     public GameObject player;
     private Rigidbody rb;
-    
+
+   // public Vector3 startPos;
     public float xForce;
     public float yForce;
     public float zForce;
+    
+   
     
     // Start is called before the first frame update
     void Start()
     {
         rb = player.GetComponent<Rigidbody>();
+
+//        startPos = moveTileBlock.GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
     
     private void OnCollisionEnter(Collision other)
@@ -30,7 +34,10 @@ public class moveBlockCollision : MonoBehaviour
         {
             Destroy(moveTileBlock);
             Destroy(other.gameObject);
-            rb.AddForce(new Vector3(xForce,yForce,zForce), ForceMode.Impulse);
+            if (player.GetComponent<Controller>().onMove)
+            {
+                rb.AddForce(new Vector3(xForce,yForce,zForce), ForceMode.Impulse);
+            }
         }
     }
 }

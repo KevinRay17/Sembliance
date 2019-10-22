@@ -52,7 +52,7 @@ public class CitySwap : MonoBehaviour
           //  gameObject.transform.localRotation = new Quaternion(gameObject.transform.localRotation.x,
             //    gameObject.transform.localRotation.y,180,gameObject.transform.localRotation.w);
         //}
-        Debug.Log(Physics.gravity);
+        //Debug.Log(Physics.gravity);
     }
 
     IEnumerator PARTICLES()
