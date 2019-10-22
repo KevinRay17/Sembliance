@@ -7,17 +7,19 @@ public class Controller : MonoBehaviour
 {
     public static Controller instance;
     public float speed = 10.0F;
+
     //public Text pointText;
     //public int points;
     int layerMask = 1 << 10;
     public bool grounded = true;
     private bool jumpWaited = true;
+    public float speedTile;
 
     public GameObject LeftW;
     public GameObject LeftB;
     public GameObject RightW;
     public GameObject RightB;
-
+    
     private Rigidbody rb;
 
     private bool gravChanged = false;
@@ -129,6 +131,10 @@ public class Controller : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if (other.gameObject.tag.Equals("StopMove"))
+        {
+            grounded = false;
+        }
         if (grounded)
         {
             

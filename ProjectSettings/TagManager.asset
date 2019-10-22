@@ -10,6 +10,8 @@ TagManager:
   - SpeedTile
   - Feet
   - GravTile
+  - MoveTile
+  - StopMove
   layers:
   - Default
   - TransparentFX

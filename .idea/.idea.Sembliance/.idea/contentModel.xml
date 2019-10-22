@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-<<<<<<< HEAD
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
-=======
-    <e p="C:\Users\Kevin Ray\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Kevin Ray\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Sembliance.-1482414552.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Kevin Ray\Documents\Sembliance" t="IncludeRecursive">
->>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -724,6 +718,8 @@
           <e p="Footprint.cs" t="Include" />
           <e p="HeadBobber.cs" t="Include" />
           <e p="MouseLook.cs" t="Include" />
+          <e p="moveBlock.cs" t="Include" />
+          <e p="moveBlockCollision.cs" t="Include" />
           <e p="SunIntensity.cs" t="Include" />
         </e>
       </e>
@@ -735,10 +731,7 @@
         <e p="bin" t="ExcludeRecursive" />
       </e>
     </e>
-<<<<<<< HEAD
     <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_Sembliance.423794275.00" t="ExcludeRecursive" />
-=======
->>>>>>> c8048c0ed2a0eab9dd1d10c0626874c8bf118a53
   </component>
 </project>
