@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class SunIntensity : MonoBehaviour
 {
+    //Sun intensity wont change much to negate fog
+    
+    
     public GameObject player;
 
     private Renderer mat;
@@ -30,7 +33,7 @@ public class SunIntensity : MonoBehaviour
     {
         distance = Vector3.Distance(player.transform.position, gameObject.transform.position);
        // Debug.Log(distance);
-        
+        //if beyond max distance set to highest. if below min distance stop changing intensity
         if (distance < near)
             intensity = low;
         else if (distance > far)
