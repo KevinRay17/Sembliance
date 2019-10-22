@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class Controller : MonoBehaviour
     //public int points;
     int layerMask = 1 << 10;
     public bool grounded = true;
+    public bool onMove = false;
     private bool jumpWaited = true;
     public float speedTile;
 
@@ -58,6 +60,7 @@ public class Controller : MonoBehaviour
                 rb.AddForce(new Vector3(0,-7f,0), ForceMode.Impulse);
             }
             grounded = false;
+            onMove = false;
             jumpWaited = false;
             StartCoroutine(JumpWait());
         }
@@ -135,9 +138,13 @@ public class Controller : MonoBehaviour
         {
             grounded = false;
         }
+        if (other.gameObject.tag.Equals("MoveTile"))
+        {
+            onMove = true;
+        }
+       
         if (grounded)
         {
-            
             //If you are on the ground and the city above you collides with you. Die
             if (CitySwap.OnWhite && other.gameObject.CompareTag("CityBlack"))
             {

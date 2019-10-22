@@ -14291,7 +14291,7 @@ PrefabInstance:
     - target: {fileID: 5680179939389488148, guid: 1f8dff4de86a64426a2f491c6e4c972c,
         type: 3}
       propertyPath: zDir
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5680179939389488148, guid: 1f8dff4de86a64426a2f491c6e4c972c,
         type: 3}
@@ -14318,6 +14318,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 740508844}
+    - target: {fileID: 8591208090747864302, guid: 1f8dff4de86a64426a2f491c6e4c972c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc76433455b3c44fdbcb61a1bbdd6dfd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f8dff4de86a64426a2f491c6e4c972c, type: 3}
 --- !u!1001 &9040224777932022878
