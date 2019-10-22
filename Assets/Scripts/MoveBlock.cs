@@ -8,12 +8,14 @@ public class MoveBlock : MonoBehaviour
     public float yDir;
     public float zDir;
     public bool moveTile = false;
+    public bool moveOneTile;
     public GameObject moveTileBlock;
     public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -21,12 +23,21 @@ public class MoveBlock : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            moveTile = false;
+            if (moveTile == true)
+            {
+                moveTile = false;
+                moveOneTile = true;
+            }
         }
         if (moveTile == true)
         {
-            moveTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f;
-            player.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f;
+            moveTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+            player.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+        }
+
+        if (moveOneTile == true)
+        {
+            moveTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
         }
     }
     
