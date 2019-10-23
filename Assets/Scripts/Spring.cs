@@ -7,11 +7,6 @@ public class Spring : MonoBehaviour
     float minHeight;
     float maxHeight;
 
-    [Header("as a child of the (Parent) City Object.")]
-    [Header("3. Add either the White or Black Spring tile prefabs")]
-    [Header ("2. Add a BoxCollider to the City Block (Child) Object.")]
-    [Header("1. Drag this script onto a City (Parent) Object.")]
-
     public bool switcher;
     public float descendSpeed = -0.05f;
     public float ascendSpeed = 0.2f;
