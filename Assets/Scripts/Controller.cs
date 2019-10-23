@@ -144,10 +144,12 @@ public class Controller : MonoBehaviour
         if (other.gameObject.tag.Equals("MoveTile"))
         {
             onMove = true;
+            onMoveBlack = false;
         }
         if (other.gameObject.tag.Equals("MoveTileBlack"))
         {
             onMoveBlack = true;
+            onMove = false;
         }
        
         if (grounded)
