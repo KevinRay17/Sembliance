@@ -27,6 +27,15 @@ public class Controller : MonoBehaviour
     private bool gravChanged = false;
 
     public bool started = false;
+
+    [Header("Colin's Player Audio BS")]
+    public AudioSource playerSource1;
+
+    public AudioSource playerSource2;
+
+    public AudioClip switchFx;
+
+    public AudioClip[] platformLandingFx;
     // Use this for initialization
     void Start()
     {
@@ -63,6 +72,12 @@ public class Controller : MonoBehaviour
             onMove = false;
             jumpWaited = false;
             StartCoroutine(JumpWait());
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            playerSource1.clip = switchFx;
+            playerSource1.Play();
         }
         
         //Raycast for gravity tile for infinity downwards. double and undouble gravity
@@ -155,6 +170,9 @@ public class Controller : MonoBehaviour
                 Restart();
             }
         }
+
+        playerSource2.clip = platformLandingFx[Random.Range(1, 4)];
+        playerSource2.Play();
     }
 
     //Reset Statics
