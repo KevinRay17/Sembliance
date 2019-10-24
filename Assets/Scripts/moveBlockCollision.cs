@@ -5,8 +5,7 @@ using UnityEngine;
 public class moveBlockCollision : MonoBehaviour
 {
     public GameObject moveTileBlock;
-    public GameObject oppositeTileBlock;
-    private GameObject player;
+    public GameObject player;
     private Rigidbody rb;
 
    // public Vector3 startPos;
@@ -14,14 +13,14 @@ public class moveBlockCollision : MonoBehaviour
     public float yForce;
     public float zForce;
     
-    private Collider collider;
-    private Collider collider2;
    
     
     // Start is called before the first frame update
     void Start()
     {
+
         player = GameObject.FindWithTag("Player");
+
         rb = player.GetComponent<Rigidbody>();
 
 //        startPos = moveTileBlock.GetComponent<Transform>();
@@ -34,21 +33,14 @@ public class moveBlockCollision : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag.Equals("StopMove") || other.gameObject.tag.Equals("StopMove2") )
+        if (other.gameObject.tag.Equals("StopMove"))
         {
+            Destroy(moveTileBlock);
+            Destroy(other.gameObject);
             if (player.GetComponent<Controller>().onMove)
             {
                 rb.AddForce(new Vector3(xForce,yForce,zForce), ForceMode.Impulse);
-                player.GetComponent<Controller>().onMove = false;
             }
-            else if (player.GetComponent<Controller>().onMoveBlack)
-            {
-                rb.AddForce(new Vector3(xForce,-yForce,zForce), ForceMode.Impulse);
-                player.GetComponent<Controller>().onMoveBlack = false;
-            }
-            Destroy(moveTileBlock);
-            Destroy(oppositeTileBlock);
-            Destroy(other.gameObject);
         }
     }
 }
