@@ -206,13 +206,15 @@ public class Controller : MonoBehaviour
                         GameObject leftW =Instantiate(LeftW, hit.point - new Vector3(.5f, .1f, 0), new Quaternion(0,0,0,180));
                         leftW.transform.forward = hit.normal * -1;
                         leftW.transform.parent = hit.transform.gameObject.transform;
+                        leftW.transform.localEulerAngles = new Vector3(leftW.transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
                         foot *= -1;
                     }
                     else
                     {
                        GameObject rightW = Instantiate(RightW, hit.point + new Vector3(.5f,-.1f,0),new Quaternion(0,0,0,180));
-                        rightW.transform.forward = hit.normal * -1;
+                        rightW.transform.forward = hit.normal *-1;
                         rightW.transform.parent = hit.transform.gameObject.transform;
+                        rightW.transform.localEulerAngles = new Vector3(rightW.transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
                         foot *= -1;
                     }
                 }
@@ -223,6 +225,7 @@ public class Controller : MonoBehaviour
                         GameObject leftB = Instantiate(LeftB, hit.point - new Vector3(.5f, -.1f, 0), Quaternion.identity);
                         leftB.transform.forward = hit.normal * -1;
                         leftB.transform.parent = hit.transform.gameObject.transform;
+                        leftB.transform.localEulerAngles = new Vector3(leftB.transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
                         foot *= -1;
                     }
                     else
@@ -230,6 +233,7 @@ public class Controller : MonoBehaviour
                         GameObject rightB = Instantiate(RightB, hit.point + new Vector3(.5f,.1f,0), Quaternion.identity);
                         rightB.transform.forward = hit.normal * -1;
                         rightB.transform.parent = hit.transform.gameObject.transform;
+                        rightB.transform.localEulerAngles = new Vector3(rightB.transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
                         foot *= -1;
                     }
                 }

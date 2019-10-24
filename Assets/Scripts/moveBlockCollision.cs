@@ -18,6 +18,9 @@ public class moveBlockCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        player = GameObject.FindWithTag("Player");
+
         rb = player.GetComponent<Rigidbody>();
 
 //        startPos = moveTileBlock.GetComponent<Transform>();

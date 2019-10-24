@@ -14,6 +14,7 @@ public class CityScaler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (transform.childCount >0)
         child = transform.GetChild(0).gameObject;
         Speed = 90;
     }
