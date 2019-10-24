@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,8 @@ public class Controller : MonoBehaviour
     //public int points;
     int layerMask = 1 << 10;
     public bool grounded = true;
+    public bool onMove = false;
+    public bool onMoveBlack = false;
     private bool jumpWaited = true;
     public float speedTile;
 
@@ -58,9 +61,12 @@ public class Controller : MonoBehaviour
                 rb.AddForce(new Vector3(0,-7f,0), ForceMode.Impulse);
             }
             grounded = false;
+            onMove = false;
+            onMoveBlack = false;
             jumpWaited = false;
             StartCoroutine(JumpWait());
         }
+      
         
         //Raycast for gravity tile for infinity downwards. double and undouble gravity
         RaycastHit hit;
@@ -135,9 +141,19 @@ public class Controller : MonoBehaviour
         {
             grounded = false;
         }
+        if (other.gameObject.tag.Equals("MoveTile"))
+        {
+            onMove = true;
+            onMoveBlack = false;
+        }
+        if (other.gameObject.tag.Equals("MoveTileBlack"))
+        {
+            onMoveBlack = true;
+            onMove = false;
+        }
+       
         if (grounded)
         {
-            
             //If you are on the ground and the city above you collides with you. Die
             if (CitySwap.OnWhite && other.gameObject.CompareTag("CityBlack"))
             {
