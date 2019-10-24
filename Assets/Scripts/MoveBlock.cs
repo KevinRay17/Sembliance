@@ -11,7 +11,7 @@ public class MoveBlock : MonoBehaviour
     public bool moveOneTile;
     public GameObject moveTileBlock;
     public GameObject oppositeTileBlock;
-    public GameObject player;
+    private GameObject player;
 
     private Collider collider;
     private Collider collider2;
@@ -19,7 +19,7 @@ public class MoveBlock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("Capsule");
     }
 
     // Update is called once per frame

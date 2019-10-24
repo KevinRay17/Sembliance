@@ -6,8 +6,7 @@ public class moveBlockCollision : MonoBehaviour
 {
     public GameObject moveTileBlock;
     public GameObject oppositeTileBlock;
-    public GameObject oppositeTileBlock2;
-    public GameObject player;
+    private GameObject player;
     private Rigidbody rb;
 
    // public Vector3 startPos;
@@ -22,6 +21,7 @@ public class moveBlockCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Capsule");
         rb = player.GetComponent<Rigidbody>();
 
 //        startPos = moveTileBlock.GetComponent<Transform>();
