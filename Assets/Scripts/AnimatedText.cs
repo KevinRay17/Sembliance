@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class AnimatedText : MonoBehaviour
 {
     public Text end;
     private string str;
+
+    public TextMeshProUGUI endtmpro;
 
     void Start()
     {
@@ -17,7 +20,7 @@ public class AnimatedText : MonoBehaviour
 
     private void Update()
     {
-        end.text = str;
+        endtmpro.text = str;
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(0);
