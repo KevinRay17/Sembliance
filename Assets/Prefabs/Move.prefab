@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 18074e753cd29cb48a9d98a35f1e0895, type: 2}
+  - {fileID: 2100000, guid: dc76433455b3c44fdbcb61a1bbdd6dfd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,6 +93,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2a7d30b63aa46769b4dd2403b5e220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xDir: 0
+  yDir: 0
+  zDir: 0
+  moveTile: 0
+  moveOneTile: 0
+  moveTileBlock: {fileID: 0}
+  oppositeTileBlock: {fileID: 0}
+  player: {fileID: 0}
 --- !u!64 &4585336331832240713
 MeshCollider:
   m_ObjectHideFlags: 0

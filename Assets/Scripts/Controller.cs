@@ -14,6 +14,7 @@ public class Controller : MonoBehaviour
     int layerMask = 1 << 10;
     public bool grounded = true;
     public bool onMove = false;
+    public bool onMoveBlack = false;
     private bool jumpWaited = true;
     public float speedTile;
 
@@ -61,9 +62,11 @@ public class Controller : MonoBehaviour
             }
             grounded = false;
             onMove = false;
+            onMoveBlack = false;
             jumpWaited = false;
             StartCoroutine(JumpWait());
         }
+      
         
         //Raycast for gravity tile for infinity downwards. double and undouble gravity
         RaycastHit hit;
@@ -141,6 +144,12 @@ public class Controller : MonoBehaviour
         if (other.gameObject.tag.Equals("MoveTile"))
         {
             onMove = true;
+            onMoveBlack = false;
+        }
+        if (other.gameObject.tag.Equals("MoveTileBlack"))
+        {
+            onMoveBlack = true;
+            onMove = false;
         }
        
         if (grounded)
