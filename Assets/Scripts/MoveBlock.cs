@@ -10,14 +10,16 @@ public class MoveBlock : MonoBehaviour
     public bool moveTile = false;
     public bool moveOneTile;
     public GameObject moveTileBlock;
-    public GameObject player;
+    public GameObject oppositeTileBlock;
+    private GameObject player;
+
+    private Collider collider;
+    private Collider collider2;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        player = GameObject.FindWithTag("Player");
-
+        player = GameObject.Find("Capsule");
     }
 
     // Update is called once per frame
@@ -34,12 +36,14 @@ public class MoveBlock : MonoBehaviour
         if (moveTile == true)
         {
             moveTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+            oppositeTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
             player.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
         }
 
         if (moveOneTile == true)
         {
             moveTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+            oppositeTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
         }
     }
     
