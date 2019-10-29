@@ -8,10 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Gameplay.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/EndScene.unity
-    guid: 17aad1631df8db74a84036512210e397
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: b5dee4f3516c8784891fe609d7655aba
   - enabled: 1
@@ -29,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KevinScene.unity
     guid: 75e19e8705ae6854996dbf26116f39d0
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 17aad1631df8db74a84036512210e397
   m_configObjects: {}
