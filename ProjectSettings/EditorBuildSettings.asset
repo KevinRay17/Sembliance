@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Colin_Scene.unity
     guid: 85ff4df7ebf70a44da72d1e464964b56
   - enabled: 1
+    path: Assets/Scenes/MaddyScene.unity
+    guid: 9dc4525092e2044f2a10ffc67388677a
+  - enabled: 1
+    path: Assets/Scenes/Spring Level.unity
+    guid: 2635c6bb8e04b41418a8c700c0b15752
+  - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 17aad1631df8db74a84036512210e397
   - enabled: 1
