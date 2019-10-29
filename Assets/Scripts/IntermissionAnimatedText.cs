@@ -6,21 +6,21 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 
-public class StartAnimatedText : MonoBehaviour
+public class IntermissionAnimatedText : MonoBehaviour
 {
     public Text start;
     private string str;
     
-    public TextMeshProUGUI starttmpro;
+    public TextMeshProUGUI intermissiontmpro;
 
     void Start()
     {
-        StartCoroutine(AnimateText("Sembliance"));
+        StartCoroutine(AnimateText("Level Complete"));
     }
 
     private void Update()
     {
-        starttmpro.text = str;
+        intermissiontmpro.text = str;
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(0);
