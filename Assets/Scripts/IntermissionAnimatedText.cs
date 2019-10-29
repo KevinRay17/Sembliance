@@ -42,7 +42,10 @@ public class IntermissionAnimatedText : MonoBehaviour
         }
 
         yield return new WaitForSeconds(3f);
-        StartCoroutine(AnimateText2("Constructing Simulation..."));
+      
+            StartCoroutine(AnimateText2("Constructing Simulation"));
+
+        
 
     }
     IEnumerator AnimateText2(string strComplete)
@@ -75,7 +78,7 @@ public class IntermissionAnimatedText : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(SceneManagerScript.nextScene);
 
     }
 }
