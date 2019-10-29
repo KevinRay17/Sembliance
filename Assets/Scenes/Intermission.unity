@@ -345,8 +345,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4bd87d4d33d35974ba3f504e6c8400d6, type: 2}
-  m_sharedMaterial: {fileID: -3518532807265445882, guid: 4bd87d4d33d35974ba3f504e6c8400d6,
+  m_fontAsset: {fileID: 11400000, guid: 32c9d32b054cc8140aa81bf11984a052, type: 2}
+  m_sharedMaterial: {fileID: -3518532807265445882, guid: 32c9d32b054cc8140aa81bf11984a052,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -583,7 +583,6 @@ GameObject:
   - component: {fileID: 1782641577}
   - component: {fileID: 1782641576}
   - component: {fileID: 1782641579}
-  - component: {fileID: 1782641580}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -663,27 +662,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782641575}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a8e562f6e411854aa7fd58d9cf5b8f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  end: {fileID: 1868045771}
-  endtmpro: {fileID: 0}
---- !u!114 &1782641580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782641575}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fcf9e2c713ee143968b170a110ecf3, type: 3}
+  m_Script: {fileID: 11500000, guid: 25d1ed0f8a4f7ee458f754f34c1dfd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1868045771}
-  starttmpro: {fileID: 0}
+  start: {fileID: 0}
+  intermissiontmpro: {fileID: 284909742}
 --- !u!1 &1868045769
 GameObject:
   m_ObjectHideFlags: 0

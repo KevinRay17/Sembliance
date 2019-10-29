@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SaminaScene.unity
     guid: d8a3bb3576b47d7499e62eb735d5d39d
+  - enabled: 1
+    path: Assets/Scenes/Intermission.unity
+    guid: ee40fee01bb36dd40b744ab1e08ff92c
+  - enabled: 1
+    path: Assets/Scenes/Colin_Scene.unity
+    guid: 85ff4df7ebf70a44da72d1e464964b56
   m_configObjects: {}
