@@ -10,7 +10,6 @@ public class IntermissionAnimatedText : MonoBehaviour
 {
     public Text start;
     private string str;
-    private int nextScene = 1;
     
     public TextMeshProUGUI intermissiontmpro;
 
@@ -79,8 +78,7 @@ public class IntermissionAnimatedText : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
-        nextScene += 1;
-        SceneManager.LoadScene(nextScene);
+        SceneManager.LoadScene(SceneManagerScript.nextScene);
 
     }
 }

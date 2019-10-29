@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneManagerScript : MonoBehaviour
 {
 
-    public static int nextScene;
+    public static int nextScene = 1;
     //nextScene = SceneManager.GetActiveScene().buildIndex +1;
     //SceneManager.LoadScene(nextScene);
     
@@ -15,7 +15,7 @@ public class SceneManagerScript : MonoBehaviour
     {
         DontDestroyOnLoad(this.transform.gameObject);
         //gets current scene
-        nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+       // nextScene = SceneManager.GetActiveScene().buildIndex + 1;
        // SceneManager.LoadScene(nextScene);
     }
 

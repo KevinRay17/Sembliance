@@ -56,5 +56,6 @@ public class SunIntensity : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         SceneManager.LoadScene(6);
+        SceneManagerScript.nextScene += 1;
     }
 }
