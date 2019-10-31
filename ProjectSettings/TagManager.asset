@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CityWhite
+  - DeadZone
+  - CityBlack
+  - SpeedTile
+  - MoveTile
+  - GravTile
+  - MoveTileBlack
+  - StopMove
+  - SideGrav
   layers:
   - Default
   - TransparentFX
@@ -13,10 +22,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Post-Processing
+  - Player
+  - City
+  - Feet
   - 
   - 
   - 
