@@ -36,16 +36,23 @@ public class MoveBlock : MonoBehaviour
         if (moveTile == true)
         {
             moveTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+
             if (oppositeTileBlock != null)
-            oppositeTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+            {
+                oppositeTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
+            }
+
             player.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
         }
 
         if (moveOneTile == true)
         {
             moveTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+
             if (oppositeTileBlock != null)
-            oppositeTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+            {
+                oppositeTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
+            }
         }
     }
     
