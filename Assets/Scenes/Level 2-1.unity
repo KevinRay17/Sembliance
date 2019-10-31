@@ -7638,6 +7638,21 @@ PrefabInstance:
       propertyPath: oppositeTileBlock
       value: 
       objectReference: {fileID: 390958942}
+    - target: {fileID: 3186668754107814252, guid: 3b725db34c7b34a0b94ffd51899361f8,
+        type: 3}
+      propertyPath: yForce
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186668754107814252, guid: 3b725db34c7b34a0b94ffd51899361f8,
+        type: 3}
+      propertyPath: zForce
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186668754107814252, guid: 3b725db34c7b34a0b94ffd51899361f8,
+        type: 3}
+      propertyPath: zDir
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b725db34c7b34a0b94ffd51899361f8, type: 3}
 --- !u!1 &1381987964 stripped

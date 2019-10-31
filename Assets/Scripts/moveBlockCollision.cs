@@ -27,12 +27,8 @@ public class moveBlockCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< HEAD
-        player = GameObject.Find("Player");
-=======
         moveTileBlock = this.gameObject.transform.parent.gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
->>>>>>> master
         rb = player.GetComponent<Rigidbody>();
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity,
