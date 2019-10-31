@@ -13,7 +13,7 @@ public class SubtitleDisplay : MonoBehaviour
     public string[] subtitleTexts;
     public AudioClip[] voiceOverLines;
 
-    public bool trigger;
+    public bool triggered;
 
     // Start is called before the first frame update
     void Start()
@@ -27,19 +27,9 @@ public class SubtitleDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (trigger)
+        if (!source.isPlaying)
         {
-            
-        }
-
-        for (int i = 0; i < voiceOverLines.Length; i++)
-        {
-            if (!source.isPlaying && trigger)
-            {
-                source.clip = voiceOverLines[i];
-                source.Play();
-                i++;
-            }
+            subtitles.text = "";
         }
     }
 
@@ -54,17 +44,14 @@ public class SubtitleDisplay : MonoBehaviour
             yield return new WaitForSeconds(source.clip.length);
             StartCoroutine(playVoiceLines());
         }
-        else
-        {
-            subtitles.text = "";
-        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "VoiceTrigger")
+        if (other.gameObject.name == "Player" && !triggered)
         {
             StartCoroutine(playVoiceLines());
+            triggered = true;
         }
     }
 }
