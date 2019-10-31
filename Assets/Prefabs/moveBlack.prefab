@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6294219223879051786}
   - component: {fileID: 6294219223879051791}
   - component: {fileID: 6294219223879051784}
-  - component: {fileID: 6294219223879051789}
   - component: {fileID: 6294219223879051785}
   - component: {fileID: 6294219223879051790}
   m_Layer: 10
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6294219223879051787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: -1.199997}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 6294219224031651894}
@@ -80,25 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6294219223879051789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6294219223879051787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0ff24855d89742c79538718789c6276, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveTileBlock: {fileID: 6294219224031651895}
-  oppositeTileBlock: {fileID: 0}
-  oppositeTileBlock2: {fileID: 0}
-  player: {fileID: 0}
-  xForce: 0
-  yForce: -12
-  zForce: 12
 --- !u!65 &6294219223879051785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -153,7 +133,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6294219224031651895}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -218,7 +198,7 @@ PrefabInstance:
     - target: {fileID: 3382157351898097301, guid: f3f1218edd9824af89d611d8b59759f2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.199997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3382157351898097301, guid: f3f1218edd9824af89d611d8b59759f2,
         type: 3}
@@ -260,32 +240,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
-    - target: {fileID: 6346009048843667575, guid: f3f1218edd9824af89d611d8b59759f2,
-        type: 3}
-      propertyPath: zDir
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 6346009048843667575, guid: f3f1218edd9824af89d611d8b59759f2,
+    - target: {fileID: 8890349000461137680, guid: f3f1218edd9824af89d611d8b59759f2,
         type: 3}
       propertyPath: moveTileBlock
       value: 
       objectReference: {fileID: 6294219224031651895}
-    - target: {fileID: 6346009048843667575, guid: f3f1218edd9824af89d611d8b59759f2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6346009048843667575, guid: f3f1218edd9824af89d611d8b59759f2,
-        type: 3}
-      propertyPath: oppositeTileBlock
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061532244482781325, guid: f3f1218edd9824af89d611d8b59759f2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: dc76433455b3c44fdbcb61a1bbdd6dfd, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6346009048843667575, guid: f3f1218edd9824af89d611d8b59759f2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f3f1218edd9824af89d611d8b59759f2, type: 3}
 --- !u!4 &8770295421849190633 stripped
 Transform:

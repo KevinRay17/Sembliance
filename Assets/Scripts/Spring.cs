@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Spring : MonoBehaviour
 {
-    float minHeight;
-    float maxHeight;
+    public float minHeight;
+    public float maxHeight;
 
     public bool switcher;
     public float descendSpeed = -0.05f;
@@ -31,13 +31,13 @@ public class Spring : MonoBehaviour
 
         if (gameObject.tag == "CityWhite")
         {
-            minHeight = -10;
-            maxHeight = -5;
+          //  minHeight = -10;
+            //maxHeight = -5;
         }
         else if (gameObject.tag == "CityBlack")
         {
-            minHeight = 5;
-            maxHeight = 0;
+           // minHeight = 5;
+            //maxHeight = 0;
 
             descendSpeed *= -1;
             ascendSpeed *= -1;

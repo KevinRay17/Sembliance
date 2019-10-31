@@ -19,7 +19,11 @@ public class MoveBlock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         player = GameObject.Find("Player");
+=======
+        player = GameObject.FindGameObjectWithTag("Player");
+>>>>>>> master
     }
 
     // Update is called once per frame
@@ -36,20 +40,30 @@ public class MoveBlock : MonoBehaviour
         if (moveTile == true)
         {
             moveTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+<<<<<<< HEAD
             if (oppositeTileBlock != null)
             {
                 oppositeTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
             }
+=======
+            if (oppositeTileBlock != null)
+            oppositeTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+>>>>>>> master
             player.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
         }
 
         if (moveOneTile == true)
         {
             moveTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+<<<<<<< HEAD
             if (oppositeTileBlock != null)
             {
                 oppositeTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
             }
+=======
+            if (oppositeTileBlock != null)
+            oppositeTileBlock.transform.position += new Vector3(xDir,yDir,zDir) * 0.1f * Time.deltaTime;
+>>>>>>> master
         }
     }
     
