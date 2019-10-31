@@ -15,7 +15,8 @@ public class CitySwap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        OnWhite = true;
+        Physics.gravity = new Vector3(0, -9.8f, 0);
     }
 
     // Update is called once per frame
@@ -29,19 +30,26 @@ public class CitySwap : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity,
                 layerMask))
             {
-                Physics.gravity = new Vector3(0, Physics.gravity.y * -1, 0);
+                Physics.gravity = Physics.gravity * -1;
                 OnWhite = !OnWhite;
                 StartCoroutine(PARTICLES());
-                if (Controller.instance.grounded)
-                transform.position = hit.point;
-                else
-                {
+               
                     if (OnWhite)
                     transform.position = hit.point + new Vector3(0, 1.5f, 0);
                     else
                     {
                         transform.position = hit.point + new Vector3(0, -1.5f, 0);
                     }
+                
+
+                if (Controller.instance.onMove)
+                {
+                    Controller.instance.onMove = false;
+                    Controller.instance.onMoveBlack = true;
+                } else if (Controller.instance.onMoveBlack)
+                {
+                    Controller.instance.onMove = true;
+                    Controller.instance.onMoveBlack = false;
                 }
                 
             }

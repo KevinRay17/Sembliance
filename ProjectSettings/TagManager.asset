@@ -12,6 +12,8 @@ TagManager:
   - GravTile
   - MoveTile
   - StopMove
+  - MoveTileBlack
+  - SideGrav
   layers:
   - Default
   - TransparentFX

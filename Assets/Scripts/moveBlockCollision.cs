@@ -16,12 +16,14 @@ public class moveBlockCollision : MonoBehaviour
     
     private Collider collider;
     private Collider collider2;
+
+    private bool onMe;
    
     
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Capsule");
+        player = GameObject.FindGameObjectWithTag("Player");
         rb = player.GetComponent<Rigidbody>();
 
 //        startPos = moveTileBlock.GetComponent<Transform>();
@@ -32,23 +34,49 @@ public class moveBlockCollision : MonoBehaviour
     {
     }
     
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("StopMove") || other.gameObject.tag.Equals("StopMove2") )
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.tag.Equals("StopMove"))
         {
-            if (player.GetComponent<Controller>().onMove)
+            Debug.Log("collided");
+            if (player.GetComponent<Controller>().onMove && onMe)
             {
+                Debug.Log("upHere");
                 rb.AddForce(new Vector3(xForce,yForce,zForce), ForceMode.Impulse);
+                Debug.Log("middleHere");
                 player.GetComponent<Controller>().onMove = false;
+                Debug.Log("here");
             }
-            else if (player.GetComponent<Controller>().onMoveBlack)
+            else if (player.GetComponent<Controller>().onMoveBlack && onMe)
             {
                 rb.AddForce(new Vector3(xForce,-yForce,zForce), ForceMode.Impulse);
                 player.GetComponent<Controller>().onMoveBlack = false;
             }
-            Destroy(moveTileBlock);
+           if (oppositeTileBlock != null)
             Destroy(oppositeTileBlock);
             Destroy(other.gameObject);
+            Destroy(moveTileBlock);
+
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("col");
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("player col");
+            onMe = true;
+        } 
+    }
+    private void OnCollisionExit(Collision other)
+    {
+        Debug.Log("leave");
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("leave play");
+            onMe = false;
         }
     }
 }

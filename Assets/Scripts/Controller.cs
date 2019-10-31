@@ -16,6 +16,7 @@ public class Controller : MonoBehaviour
     public bool onMove = false;
     public bool onMoveBlack = false;
     private bool jumpWaited = true;
+    public bool gravSwitched = false;
     public float speedTile;
 
     public GameObject LeftW;
@@ -145,7 +146,24 @@ public class Controller : MonoBehaviour
     {
         if (other.gameObject.CompareTag("DeadZone"))
         {
-           Restart();
+            Restart();
+        } else if (other.gameObject.CompareTag("SideGrav"))
+        {
+            gravSwitched = !gravSwitched;
+            if (gravSwitched)
+            {
+                if (CitySwap.OnWhite)
+                    Physics.gravity = new Vector3(-9.8f, 0, 0);
+                else
+                    Physics.gravity = new Vector3(9.8f, 0, 0);
+            }
+            else
+            { 
+                if (CitySwap.OnWhite)
+                    Physics.gravity = new Vector3(0, -9.8f, 0);
+                else
+                    Physics.gravity = new Vector3(0, 9.8f, 0);
+            }
         }
     }
 
@@ -184,13 +202,15 @@ public class Controller : MonoBehaviour
         playerSource2.Play();
     }
 
+    
+
     //Reset Statics
     void Restart()
     {
         CitySwap.OnWhite = true;
         if (Physics.gravity.y > 0)
         {
-            Physics.gravity = new Vector3(0,Physics.gravity.y * -1,0);
+            Physics.gravity = Physics.gravity * -1;
         }
         Application.LoadLevel(Application.loadedLevel);
     }
