@@ -107,11 +107,6 @@ MonoBehaviour:
   subtitles: {fileID: 0}
   source: {fileID: 0}
   currentLine: 0
-  subtitleTexts:
-  - That thing you burned up isn't important to me. It's the fluid catalytic cracking
-    unit. It made shoes for orphans.
-  - Nice job breaking it, hero.
-  voiceOverLines:
-  - {fileID: 8300000, guid: 0a10937bee408ee4a97835a7e0526336, type: 3}
-  - {fileID: 8300000, guid: fbb0e090794f8ff45a7016d587e39537, type: 3}
+  subtitleTexts: []
+  voiceOverLines: []
   triggered: 0
