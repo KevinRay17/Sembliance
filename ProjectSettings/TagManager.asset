@@ -12,6 +12,7 @@ TagManager:
   - GravTile
   - MoveTile
   - StopMove
+  - MoveTileBlack
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Player
   - City
   - Feet
-  - 
+  - SubtitleUI
   - 
   - 
   - 
