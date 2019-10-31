@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class moveBlockCollision : MonoBehaviour
 {
-    public GameObject moveTileBlock;
-    public GameObject oppositeTileBlock;
+    private GameObject moveTileBlock;
+    private GameObject oppositeTileBlock;
     private GameObject player;
     private Rigidbody rb;
 
@@ -17,30 +15,68 @@ public class moveBlockCollision : MonoBehaviour
     private Collider collider;
     private Collider collider2;
 
-    private bool onMe;
-   
-    
+    public bool onMe;
+
+    public float xDir;
+    public float yDir;
+    public float zDir;
+    public bool moveTile = false;
+    public bool moveOneTile;
+
+    int layerMask = 1 << 10;
     // Start is called before the first frame update
     void Start()
     {
+        moveTileBlock = this.gameObject.transform.parent.gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
         rb = player.GetComponent<Rigidbody>();
-
-//        startPos = moveTileBlock.GetComponent<Transform>();
-    }
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity,
+                layerMask))
+        {
+            if (hit.transform.CompareTag("MoveTile") || hit.transform.CompareTag("MoveTileBlack")){
+                oppositeTileBlock = hit.transform.parent.gameObject;
+            }
+        }
+            //        startPos = moveTileBlock.GetComponent<Transform>();
+        }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (moveTile == true)
+            {
+                moveTile = false;
+                moveOneTile = true;
+                onMe = false;
+            }
+        }
+        if (moveTile == true)
+        {
+            moveTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
+            if (oppositeTileBlock != null)
+                oppositeTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
+            player.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
+        }
+
+        if (moveOneTile == true)
+        {
+            moveTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
+            if (oppositeTileBlock != null)
+                oppositeTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
+        }
     }
-    
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.name);
         if (other.gameObject.tag.Equals("StopMove"))
         {
             Debug.Log("collided");
-            if (player.GetComponent<Controller>().onMove && onMe)
+            
+            if (onMe)
             {
                 Debug.Log("upHere");
                 rb.AddForce(new Vector3(xForce,yForce,zForce), ForceMode.Impulse);
@@ -61,22 +97,21 @@ public class moveBlockCollision : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("col");
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.tag.Equals("Player"))
         {
-            Debug.Log("player col");
+            moveTile = true;
             onMe = true;
-        } 
-    }
-    private void OnCollisionExit(Collision other)
-    {
-        Debug.Log("leave");
-        if (other.gameObject.CompareTag("Player"))
+            Debug.Log("enter");
+        }
+        if (other.gameObject.tag.Equals("StopMove"))
         {
-            Debug.Log("leave play");
-            onMe = false;
+            moveTile = false;
         }
     }
+   
+   
+
 }

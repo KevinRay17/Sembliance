@@ -115,9 +115,17 @@ public class Controller : MonoBehaviour
 
 
         //Raycast for speed tile, reset immediately if not hitting speedtile
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, (transform.localScale.y + .1f)) && hit.transform.gameObject.CompareTag("SpeedTile"))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, (transform.localScale.y + .1f)))
         {
-            speed = 15;
+            if (hit.transform.gameObject.CompareTag("SpeedTile"))
+            {
+                speed = 15;
+            } else
+            {
+                speed = 5;
+            }
+
+
         }
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, (transform.localScale.y + .1f)) && !hit.transform.gameObject.CompareTag("SpeedTile"))
         {
@@ -175,6 +183,7 @@ public class Controller : MonoBehaviour
         }
         if (other.gameObject.tag.Equals("MoveTile"))
         {
+            
             onMove = true;
             onMoveBlack = false;
         }
