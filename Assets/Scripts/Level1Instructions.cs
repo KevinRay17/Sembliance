@@ -39,7 +39,7 @@ public class Level1Instructions : MonoBehaviour
         if (Vector3.Distance(Player.transform.position, CLICKtrigger.transform.position) < 10f)
         {
             Debug.Log("CLICKTRIGGERED");
-            uiText.text = "M1 to Flip";
+            uiText.text = "LEFT CLICK to Flip";
         }
 
         //hint for SPACE Press to flip
