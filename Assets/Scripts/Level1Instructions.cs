@@ -34,16 +34,20 @@ public class Level1Instructions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         //hint for M1 Click:
         if (Vector3.Distance(Player.transform.position, CLICKtrigger.transform.position) < 10f)
         {
+            Debug.Log("CLICKTRIGGERED");
             uiText.text = "M1 to Flip";
         }
 
+        //hint for SPACE Press to flip
         if (Vector3.Distance(Player.transform.position, Jumptrigger.transform.position) < 3f)
         {
+            Debug.Log("Player Detected!");
             jumpText.text = "SPACE to Jump";
         }
+      
     }
 }

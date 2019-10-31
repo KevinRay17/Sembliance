@@ -29,15 +29,15 @@ public class Spring : MonoBehaviour
         rb.useGravity = false;
         rb.isKinematic = true;
 
-        if (gameObject.tag == "CityWhite")
+        if (gameObject.tag == "CityWhite" && minHeight == 0 && maxHeight == 0)
         {
-          //  minHeight = -10;
-            //maxHeight = -5;
+            minHeight = -10;
+            maxHeight = -5;
         }
-        else if (gameObject.tag == "CityBlack")
+        else if (gameObject.tag == "CityBlack" && minHeight == 0 && maxHeight == 0)
         {
-           // minHeight = 5;
-            //maxHeight = 0;
+            minHeight = 5;
+            maxHeight = 0;
 
             descendSpeed *= -1;
             ascendSpeed *= -1;
