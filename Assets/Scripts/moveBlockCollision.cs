@@ -27,6 +27,7 @@ public class moveBlockCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        onMe = true;
         moveTileBlock = this.gameObject.transform.parent.gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
         rb = player.GetComponent<Rigidbody>();
@@ -76,11 +77,11 @@ public class moveBlockCollision : MonoBehaviour
         {
             Debug.Log("collided");
             
-            if (onMe)
+            if (player.GetComponent<Controller>().onMove && onMe)
             {
                 Debug.Log("upHere");
                 rb.AddForce(new Vector3(xForce,yForce,zForce), ForceMode.Impulse);
-                Debug.Log("middleHere");
+                Debug.Log(yForce);
                 player.GetComponent<Controller>().onMove = false;
                 Debug.Log("here");
             }
