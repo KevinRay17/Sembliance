@@ -30,9 +30,9 @@ public class SubtitleDisplay : MonoBehaviour
     {
         if (other.gameObject.name == "Player" && !triggered)
         {
+            triggered = true; // Ensures this trigger won't start again
             manager.source.Stop(); // Stops current audio
             manager.currentLine = 0; // Resets current line
-            triggered = true; // Ensures this trigger won't start again
             manager.subtitleTexts.Clear(); // Clears current set of subtitles
             manager.voiceOverLines.Clear(); // Clears current set of lines
             manager.subtitleTexts.AddRange(subtitleTexts); // Adds new subtitles
