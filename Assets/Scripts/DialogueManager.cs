@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogueManager : MonoBehaviour
@@ -8,19 +9,23 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI subtitles;
     public AudioSource source;
 
+    public Image panelShort;
+    public Image panelTall;
+
     public GameObject currentTrigger;
     public int currentLine;
 
     public List<string> subtitleTexts;
     public List<AudioClip> voiceOverLines;
 
-    float timer;
-
     // Start is called before the first frame update
     void Start()
     {
         subtitles = GameObject.Find("Subtitles").GetComponent<TextMeshProUGUI>();
         source = GameObject.Find("Subtitles").GetComponent<AudioSource>();
+
+        panelShort = GameObject.Find("PanelShort").GetComponent<Image>();
+        panelTall = GameObject.Find("PanelTall").GetComponent<Image>();
 
         subtitles.text = "";
     }
@@ -31,41 +36,32 @@ public class DialogueManager : MonoBehaviour
         if (!source.isPlaying)
         {
             subtitles.text = "";
+            panelShort.enabled = false;
+            panelTall.enabled = false;
         }
 
         PlayVoice();
     }
 
-    public IEnumerator playVoiceLines()
-    {
-        subtitles.text = subtitleTexts[currentLine];
-        source.clip = voiceOverLines[currentLine];
-        source.Play();
-        if (currentLine < voiceOverLines.Count)
-        {
-            currentLine++;
-            yield return new WaitForSeconds(source.clip.length);
-            StartCoroutine(playVoiceLines());
-        }
-        //subtitleTexts.Clear();
-        //voiceOverLines.Clear();
-    }
-
     public void PlayVoice()
     {
-        if (currentLine < voiceOverLines.Count)
+        if (currentLine < voiceOverLines.Count && !source.isPlaying)
         {
-            if (!source.isPlaying)
-            {
-                subtitles.text = subtitleTexts[currentLine];
-                source.clip = voiceOverLines[currentLine];
-                source.Play();
+            subtitles.text = subtitleTexts[currentLine];
+            source.clip = voiceOverLines[currentLine];
+            source.Play();
 
-                currentLine++;
+            currentLine++;
+
+            if (subtitles.isTextOverflowing)
+            {
+                panelTall.enabled = false;
+                panelShort.enabled = true;
             }
             else
             {
-                
+                panelTall.enabled = true;
+                panelShort.enabled = false;
             }
         }
     }
