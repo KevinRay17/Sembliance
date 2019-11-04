@@ -127,6 +127,8 @@ public class Controller : MonoBehaviour
         {
             StartCoroutine(PlaceFeet());
             grounded = true;
+            playerSource2.clip = platformLandingFx[Random.Range(1, 4)];
+            playerSource2.Play();
         }
         //Unlock Cursor
         if (Input.GetKeyDown("escape"))
@@ -180,8 +182,8 @@ public class Controller : MonoBehaviour
             }
         }
 
-        playerSource2.clip = platformLandingFx[Random.Range(1, 4)];
-        playerSource2.Play();
+       // playerSource2.clip = platformLandingFx[Random.Range(1, 4)];
+       // playerSource2.Play();
     }
 
     //Reset Statics
