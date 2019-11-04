@@ -21,11 +21,14 @@ public class SunIntensity : MonoBehaviour
     private float high = 27.0f;
     private float low = 7.0f;
     private float intensity;
+    private int nextScene;
+    
     // Start is called before the first frame update
     void Start()
     {
         mat = GetComponent<Renderer>();
-        
+        nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+
     }
 
     // Update is called once per frame
@@ -52,6 +55,7 @@ public class SunIntensity : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(8);
+        SceneManagerScript.nextScene += 1;
     }
 }

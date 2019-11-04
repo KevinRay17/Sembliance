@@ -75,6 +75,7 @@ public class AnimatedText : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(3);
 
     }
 }
