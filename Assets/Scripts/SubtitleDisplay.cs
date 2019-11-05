@@ -28,6 +28,7 @@ public class SubtitleDisplay : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //also, only call if the boolean corresponsing to this trigger in the static boolean array is false
         if (other.gameObject.name == "Player" && !triggered)
         {
             triggered = true; // Ensures this trigger won't start again
@@ -43,6 +44,10 @@ public class SubtitleDisplay : MonoBehaviour
                 Destroy(manager.currentTrigger); // Destroys the old trigger
             }
             manager.currentTrigger = this.gameObject; // Adds the new trigger
+
+
+            //find index of this trigger in manager.voice triggers
+            //set the boolean at that same index in the isVoiceTriggered array to true
         }
     }
 }
