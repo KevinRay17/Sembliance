@@ -5,6 +5,7 @@ using UnityEngine;
 public class CitySwap : MonoBehaviour
 {
     public static bool OnWhite = true;
+    public static bool flipPossible = true;
     int layerMask = 1 << 10;
 
     public ParticleSystem PS;
@@ -51,12 +52,22 @@ public class CitySwap : MonoBehaviour
                     Controller.instance.onMove = true;
                     Controller.instance.onMoveBlack = false;
                 }
-              
                 
+                //run change image in FlipUI
+                FlipUI.instance.changeImages();
+                Controller.instance.playerSource1.clip = Controller.instance.switchFx;
+                Controller.instance.playerSource1.Play();
+
             }
             if (hit.transform == null)
             {
+                
                 Debug.Log("NUDLADNCL");
+                flipPossible = false;
+                StartCoroutine(FlipUI.instance.failFlip());
+                Controller.instance.playerSource1.clip = Controller.instance.error;
+                Controller.instance.playerSource1.Play();
+
             }
 
 

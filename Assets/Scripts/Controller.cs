@@ -35,6 +35,10 @@ public class Controller : MonoBehaviour
 
     public AudioSource playerSource2;
 
+
+    //audio clip for inability to click/flip on a tile
+    public AudioClip error;
+    
     public AudioClip switchFx;
 
     public AudioClip[] platformLandingFx;
@@ -77,11 +81,16 @@ public class Controller : MonoBehaviour
             StartCoroutine(JumpWait());
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            playerSource1.clip = switchFx;
-            playerSource1.Play();
-        }
+        //added error audio clip if the player is unable to flip
+        //if (Input.GetMouseButtonDown(0) /*&& CitySwap.flipPossible == true*/)
+        //{
+        
+       // }
+
+      //  else if (Input.GetMouseButtonDown(0) && CitySwap.flipPossible == false)
+       // {
+          
+      //  }
         
         //Raycast for gravity tile for infinity downwards. double and undouble gravity
         RaycastHit hit;
