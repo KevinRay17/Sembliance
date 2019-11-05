@@ -5,69 +5,74 @@ using UnityEngine;
 public class CameraBeginningFun : MonoBehaviour
 {
     public GameObject player;
+    private GameObject canvas;
 
+    public static bool runCinematic = true;
     public bool startInSun = true;
     public bool rotate = true;
     public bool rotate2 = true;
     public bool startGame = false;
+    private float desiredRot;
 
     public float timer;
     public float timer2;
     // Start is called before the first frame update
     void Start()
     {
-        
+        desiredRot = transform.eulerAngles.z;
+        canvas = GameObject.FindGameObjectWithTag("PlayerCanvas");
+        canvas.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (startInSun == false)
+        if (runCinematic == true)
         {
-            if (transform.rotation.x >= -0.5 && rotate)
+            if (startInSun == false && rotate == true)
             {
-                transform.Rotate(-0.5f, 0, 0, Space.Self);
-                if (transform.rotation.x <= -0.5)
+                var desiredRotQ = Quaternion.Euler(-50f, transform.eulerAngles.y, transform.eulerAngles.z);
+                transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotQ, Time.deltaTime * 1f);
+                Debug.Log(transform.eulerAngles.x);
+                if (transform.eulerAngles.x <= 312f)
                 {
                     rotate = false;
                 }
             }
-            else if (rotate == false && rotate2 == true)
+            else if (startInSun == false && rotate == false)
             {
-                timer += Time.deltaTime;
-                if (timer >= 1f)
+                var desiredRotQ2 = Quaternion.Euler( 0f, transform.eulerAngles.y, transform.eulerAngles.z);
+                transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotQ2, Time.deltaTime * 1f);
+                if (transform.eulerAngles.x >= 359.5f)
                 {
-                    transform.Rotate(0.5f, 0, 0, Space.Self);
-                    if (transform.rotation.x >= 0.15f)
-                    {
-                        rotate2 = false;
-                    }
+                    startGame = true;
+                    this.GetComponent<MouseLook>().enabled = true;
+                    player.GetComponent<Controller>().enabled = true;
+                    player.GetComponent<CityScaler>().enabled = true;
+                    canvas.SetActive(true);
+                    runCinematic = false;
+                    this.enabled = false;
                 }
+               
             }
-            else if (rotate2 == false && startGame == false)
+            else
             {
-                timer2 += Time.deltaTime;
-                Debug.Log(timer2);
-                if (timer2 >= 1f && startGame == false)
+                transform.position = Vector3.Lerp(transform.position, player.transform.position, 0.4f * Time.deltaTime);
+                if (transform.position.y <= 26.05f)
                 {
-                    transform.Rotate(-0.5f, 0, 0, Space.Self);
-                    if (transform.rotation.x <= 0f)
-                    {
-                        startGame = true;
-                        this.GetComponent<MouseLook>().enabled = true;
-                        player.GetComponent<Controller>().enabled = true;
-                        this.enabled = false;
-                    }
+                    startInSun = false;
                 }
             }
         }
         else
         {
-            transform.position = Vector3.Lerp(transform.position, player.transform.position, 0.4f * Time.deltaTime);
-            if (transform.position.y <= 26.05f)
-            {
-                startInSun = false;
-            }
+            transform.position = player.transform.position;
+            this.GetComponent<MouseLook>().enabled = true;
+            player.GetComponent<Controller>().enabled = true;
+            player.GetComponent<CityScaler>().enabled = true;
+            canvas.SetActive(true);
+            this.enabled = false;
         }
+        
     }
 }
