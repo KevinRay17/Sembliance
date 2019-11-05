@@ -28,6 +28,7 @@ public class moveBlockCollision : MonoBehaviour
     void Start()
     {
         onMe = true;
+        moveTile = false;
         moveTileBlock = this.gameObject.transform.parent.gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
         rb = player.GetComponent<Rigidbody>();
@@ -60,13 +61,6 @@ public class moveBlockCollision : MonoBehaviour
             if (oppositeTileBlock != null)
                 oppositeTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
             player.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
-        }
-
-        if (moveOneTile == true)
-        {
-            moveTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
-            if (oppositeTileBlock != null)
-                oppositeTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
         }
     }
 
