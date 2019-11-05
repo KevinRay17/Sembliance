@@ -21,17 +21,21 @@ public class FlipUI : MonoBehaviour
     {
         changeImages();
     }
+    private void Update()
+    {
+        changeImages();
+    }
 
     void changeImages() //attach to event trigger
     {
-        if (CitySwap.WhiteUI == true)
+        if (CitySwap.OnWhite == true)
         {
             gameObject.GetComponent<Image>().sprite = blackArrow;
         }
-        if(CitySwap.WhiteUI == false)
+        if(CitySwap.OnWhite == false)
         {
             Debug.Log("On black has returned true");
-            gameObject.GetComponent<Image>().sprite = whiteArrow;
+           gameObject.GetComponent<Image>().sprite = whiteArrow;
 
         }
 
