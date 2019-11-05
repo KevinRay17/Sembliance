@@ -13,6 +13,8 @@ TagManager:
   - MoveTileBlack
   - StopMove
   - SideGrav
+  - Feet
+  - PlayerCanvas
   layers:
   - Default
   - TransparentFX
