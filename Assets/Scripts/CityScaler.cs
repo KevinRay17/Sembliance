@@ -23,13 +23,16 @@ public class CityScaler : MonoBehaviour
     void Update()
     {
         //Scale increases and speed decreases on negative curve until min speed is reached
-        if (Controller.instance.started)
+        if (Controller.instance != null)
         {
-            if (!collided)
+            if (Controller.instance.started)
             {
-                gameObject.transform.localScale += new Vector3(0, .001f * Speed * Time.deltaTime, 0);
-                if (Speed > 20)
-                    Speed -= Time.deltaTime;
+                if (!collided)
+                {
+                    gameObject.transform.localScale += new Vector3(0, .001f * Speed * Time.deltaTime, 0);
+                    if (Speed > 20)
+                        Speed -= Time.deltaTime;
+                }
             }
         }
 

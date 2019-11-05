@@ -62,8 +62,9 @@ public class CitySwap : MonoBehaviour
             if (hit.transform == null)
             {
                 
-                Debug.Log("NUDLADNCL");
+               
                 flipPossible = false;
+                if (!FlipUI.instance.failing)
                 StartCoroutine(FlipUI.instance.failFlip());
                 Controller.instance.playerSource1.clip = Controller.instance.error;
                 Controller.instance.playerSource1.Play();

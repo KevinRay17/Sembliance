@@ -19,7 +19,7 @@ public class FlipUI : MonoBehaviour
     public AnimationCurve myTweenCurve;
 
     public static FlipUI instance;
-
+    public bool failing;
     
 
     void Start()
@@ -51,7 +51,8 @@ public class FlipUI : MonoBehaviour
     }
 
    public IEnumerator failFlip()
-    {
+   {
+       failing = true;
         if (CitySwap.OnWhite == true && CitySwap.flipPossible == false)
         {
             gameObject.GetComponent<Image>().sprite = REDblackArrow;
@@ -67,10 +68,22 @@ public class FlipUI : MonoBehaviour
         while (t < 1)
         {
             gameObject.transform.localScale = Vector3.LerpUnclamped(startScale, endScale, myTweenCurve.Evaluate(t));
-            t += Time.deltaTime;
+            t += Time.deltaTime *6;
             yield return 0;
+            
         }
 
         transform.localScale = startScale;
-    }
+       if (CitySwap.OnWhite == true)
+       {
+           gameObject.GetComponent<Image>().sprite = blackArrow;
+       }
+       if(CitySwap.OnWhite == false)
+       {
+           Debug.Log("On black has returned true");
+           gameObject.GetComponent<Image>().sprite = whiteArrow;
+
+       }
+       failing = false;
+   }
 }

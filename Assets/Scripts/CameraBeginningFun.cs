@@ -48,7 +48,7 @@ public class CameraBeginningFun : MonoBehaviour
                     startGame = true;
                     this.GetComponent<MouseLook>().enabled = true;
                     player.GetComponent<Controller>().enabled = true;
-                    player.GetComponent<CityScaler>().enabled = true;
+                    player.GetComponent<CitySwap>().enabled = true;
                     canvas.SetActive(true);
                     runCinematic = false;
                     this.enabled = false;
@@ -69,7 +69,7 @@ public class CameraBeginningFun : MonoBehaviour
             transform.position = player.transform.position;
             this.GetComponent<MouseLook>().enabled = true;
             player.GetComponent<Controller>().enabled = true;
-            player.GetComponent<CityScaler>().enabled = true;
+            player.GetComponent<CitySwap>().enabled = true;
             canvas.SetActive(true);
             this.enabled = false;
         }
