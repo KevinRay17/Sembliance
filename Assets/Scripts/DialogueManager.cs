@@ -18,9 +18,21 @@ public class DialogueManager : MonoBehaviour
     public List<string> subtitleTexts;
     public List<AudioClip> voiceOverLines;
 
+    //in inspector, drag all voice trigger objects into this array
+    //public SubtitleDisplay[] voiceTriggers;
+
+    //public static bool[] isVoiceTriggered;
+    //public static bool triggersSetUp;
+    
     // Start is called before the first frame update
     void Start()
     {
+        //if (!triggersSetUp)
+        //{
+        //    triggersSetUp = true;
+        //    //here i want to fill my boolean array with all false. it should be the 
+        //    //length of the SubtitleDisplay array
+        //}
         subtitles = GameObject.Find("Subtitles").GetComponent<TextMeshProUGUI>();
         source = GameObject.Find("Subtitles").GetComponent<AudioSource>();
 
@@ -50,8 +62,10 @@ public class DialogueManager : MonoBehaviour
             subtitles.text = subtitleTexts[currentLine];
             source.clip = voiceOverLines[currentLine];
             source.Play();
-
-            currentLine++;
+            
+            //Debug.Log("Is the text overflowing? " + subtitles.isTextOverflowing);
+            //char[] characters = subtitleTexts[currentLine].ToCharArray();
+            //print(characters.Length);
 
             if (subtitles.isTextOverflowing)
             {
@@ -63,6 +77,7 @@ public class DialogueManager : MonoBehaviour
                 panelTall.enabled = true;
                 panelShort.enabled = false;
             }
+            currentLine++;
         }
     }
 }
