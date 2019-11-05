@@ -12,14 +12,14 @@ public class pauseBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
         GameObject camera = GameObject.FindWithTag("MainCamera");
-        if (Input.GetKeyDown("escape") && camera.GetComponent<CameraBeginningFun>().startGame == true)
+        if (Input.GetKeyDown("escape"))
         {
             ActivateMenu();
         }
