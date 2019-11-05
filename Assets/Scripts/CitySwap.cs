@@ -51,8 +51,15 @@ public class CitySwap : MonoBehaviour
                     Controller.instance.onMove = true;
                     Controller.instance.onMoveBlack = false;
                 }
+              
                 
             }
+            if (hit.transform == null)
+            {
+                Debug.Log("NUDLADNCL");
+            }
+
+
         }
 
         //if (!OnWhite)
