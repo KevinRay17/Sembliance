@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4795779958265966042}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: PlayerCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -134,7 +134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 398, y: -302}
+  m_AnchoredPosition: {x: 334, y: -248}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4795779958959423232
@@ -165,6 +165,40 @@ MonoBehaviour:
     type: 3}
   REDwhiteArrow: {fileID: 198366191843147611, guid: 2f667c157bb24114abf8ac10783c50f8,
     type: 3}
+  myTweenCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0041656494
+      value: 0.012424469
+      inSlope: 2.2939126
+      outSlope: 2.2939126
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.49461976
+      value: 1.1374834
+      inSlope: 0.36636335
+      outSlope: 0.36636335
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9916687
+      value: -0.018627167
+      inSlope: -1.549759
+      outSlope: -1.549759
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.42978132
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  failing: 0
 --- !u!114 &4795779958959423239
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -49,8 +49,8 @@ public class moveBlockCollision : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (moveTile == true)
-            {
-                moveTile = false;
+           {
+                //moveTile = false;
                 moveOneTile = true;
                 onMe = false;
             }
@@ -60,7 +60,11 @@ public class moveBlockCollision : MonoBehaviour
             moveTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
             if (oppositeTileBlock != null)
                 oppositeTileBlock.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
-            player.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
+            if (onMe == true)
+            {
+                player.transform.position += new Vector3(xDir, yDir, zDir) * 0.1f * Time.deltaTime;
+            }
+            
         }
     }
 
@@ -74,14 +78,14 @@ public class moveBlockCollision : MonoBehaviour
             if (player.GetComponent<Controller>().onMove && onMe)
             {
                 Debug.Log("upHere");
-                rb.AddForce(new Vector3(xForce,yForce,zForce), ForceMode.Impulse);
+                rb.AddForce(new Vector3(xForce,12,zForce), ForceMode.Impulse);
                 Debug.Log(yForce);
                 player.GetComponent<Controller>().onMove = false;
                 Debug.Log("here");
             }
             else if (player.GetComponent<Controller>().onMoveBlack && onMe)
             {
-                rb.AddForce(new Vector3(xForce,-yForce,zForce), ForceMode.Impulse);
+                rb.AddForce(new Vector3(xForce,-12,zForce), ForceMode.Impulse);
                 player.GetComponent<Controller>().onMoveBlack = false;
             }
            if (oppositeTileBlock != null)

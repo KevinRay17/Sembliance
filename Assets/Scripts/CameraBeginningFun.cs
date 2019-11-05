@@ -11,7 +11,7 @@ public class CameraBeginningFun : MonoBehaviour
     public bool startInSun = true;
     public bool rotate = true;
     public bool rotate2 = true;
-    public bool startGame = false;
+    public bool startGame;
     private float desiredRot;
 
     public float timer;
@@ -29,6 +29,7 @@ public class CameraBeginningFun : MonoBehaviour
     {
         if (runCinematic == true)
         {
+            startGame = false;
             if (startInSun == false && rotate == true)
             {
                 var desiredRotQ = Quaternion.Euler(-50f, transform.eulerAngles.y, transform.eulerAngles.z);
@@ -66,6 +67,7 @@ public class CameraBeginningFun : MonoBehaviour
         }
         else
         {
+            startGame = true;
             transform.position = player.transform.position;
             this.GetComponent<MouseLook>().enabled = true;
             player.GetComponent<Controller>().enabled = true;

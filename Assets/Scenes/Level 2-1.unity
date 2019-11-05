@@ -400,6 +400,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 8.730457
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 5.06
+      objectReference: {fileID: 0}
     - target: {fileID: 5680179939389488148, guid: 1f8dff4de86a64426a2f491c6e4c972c,
         type: 3}
       propertyPath: zDir
@@ -420,21 +435,6 @@ PrefabInstance:
       propertyPath: oppositeTileBlock
       value: 
       objectReference: {fileID: 1026668066}
-    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 8.730457
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 5.06
-      objectReference: {fileID: 0}
     - target: {fileID: 1575352675245436700, guid: 1f8dff4de86a64426a2f491c6e4c972c,
         type: 3}
       propertyPath: player
@@ -1672,6 +1672,7 @@ MonoBehaviour:
   started: 0
   playerSource1: {fileID: 0}
   playerSource2: {fileID: 0}
+  error: {fileID: 0}
   switchFx: {fileID: 0}
   platformLandingFx: []
 --- !u!136 &740508847
@@ -9170,6 +9171,16 @@ PrefabInstance:
       propertyPath: oppositeTileBlock
       value: 
       objectReference: {fileID: 1716427970}
+    - target: {fileID: 1476396721300851393, guid: 1f8dff4de86a64426a2f491c6e4c972c,
+        type: 3}
+      propertyPath: zDir
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476396721300851393, guid: 1f8dff4de86a64426a2f491c6e4c972c,
+        type: 3}
+      propertyPath: yForce
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 853361126, guid: 1f8dff4de86a64426a2f491c6e4c972c, type: 3}
       propertyPath: oppositeTileBlock
       value: 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.64232326, g: 0.6423277, b: 0.6423666, a: 1}
+  m_IndirectSpecularColor: {r: 0.64232296, g: 0.6423275, b: 0.6423663, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14277,11 +14277,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4795779958265966040, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: m_TagString
-      value: PlayerCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 4795779958265966041, guid: f642ccab383ab3349a71e5f1dceb13d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14389,118 +14384,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4795779958959423238, guid: f642ccab383ab3349a71e5f1dceb13d2,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 334
+      propertyPath: m_AnchoredPosition.y
+      value: -169
       objectReference: {fileID: 0}
     - target: {fileID: 4795779958959423238, guid: f642ccab383ab3349a71e5f1dceb13d2,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -248
+      propertyPath: m_AnchoredPosition.x
+      value: 325
       objectReference: {fileID: 0}
     - target: {fileID: 4795779958265966036, guid: f642ccab383ab3349a71e5f1dceb13d2,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 4795779958265966043, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[0].inSlope
-      value: 2.2939126
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[0].outSlope
-      value: 2.2939126
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[0].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[1].time
-      value: 0.49461976
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[1].value
-      value: 1.1374834
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[1].inSlope
-      value: 0.36636335
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[1].outSlope
-      value: 0.36636335
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[1].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[0].value
-      value: 0.012424469
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[2].time
-      value: 0.9916687
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[2].value
-      value: -0.018627167
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[2].inSlope
-      value: -1.549759
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[2].outSlope
-      value: -1.549759
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[2].inWeight
-      value: 0.42978132
-      objectReference: {fileID: 0}
-    - target: {fileID: 4795779958959423233, guid: f642ccab383ab3349a71e5f1dceb13d2,
-        type: 3}
-      propertyPath: myTweenCurve.m_Curve.Array.data[0].time
-      value: 0.0041656494
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f642ccab383ab3349a71e5f1dceb13d2, type: 3}

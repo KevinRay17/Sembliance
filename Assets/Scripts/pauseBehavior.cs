@@ -19,7 +19,7 @@ public class pauseBehavior : MonoBehaviour
     void Update()
     {
         GameObject camera = GameObject.FindWithTag("MainCamera");
-        if (Input.GetKeyDown("escape") && camera.GetComponent<CameraBeginningFun>().enabled == false)
+        if (Input.GetKeyDown("escape") && camera.GetComponent<CameraBeginningFun>().startGame == true)
         {
             ActivateMenu();
         }
