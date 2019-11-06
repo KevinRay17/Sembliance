@@ -37,6 +37,10 @@ public class Controller : MonoBehaviour
 
     public AudioClip switchFx;
 
+    public AudioClip deathFX;
+
+    public AudioClip footsteps;
+
     public AudioClip[] platformLandingFx;
     // Use this for initialization
     void Start()
@@ -59,11 +63,14 @@ public class Controller : MonoBehaviour
         strafe *= Time.deltaTime;
         //if (CitySwap.OnWhite)
         transform.Translate(strafe, 0, translation);
+
         
       
         //Jump Force in opposite of ground, Start Timer to prevent cast detection after jump
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
+            playerSource1.clip = deathFX;
+            playerSource1.Play();
             if (CitySwap.OnWhite)
             rb.AddForce(new Vector3(0,7f,0), ForceMode.Impulse);
             else
@@ -120,6 +127,8 @@ public class Controller : MonoBehaviour
             if (hit.transform.gameObject.CompareTag("SpeedTile"))
             {
                 speed = 15;
+                hit.transform.GetComponent<AudioSource>().Play();
+
             } else
             {
                 speed = 5;
@@ -138,6 +147,7 @@ public class Controller : MonoBehaviour
             grounded = true;
             playerSource2.clip = platformLandingFx[Random.Range(1, 4)];
             playerSource2.Play();
+
         }
         //Unlock Cursor
         if (Input.GetKeyDown("escape"))
@@ -149,6 +159,7 @@ public class Controller : MonoBehaviour
     {
      yield return new WaitForSeconds(.25f);
         jumpWaited = true;
+
     }
 
     //if you fall you die. Will change to coroutine with effects and sounds
