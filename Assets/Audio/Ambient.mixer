@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-7066083172648882465
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 18f81df2938f4a44e980e54acdbf61e2
+  m_EffectName: Attenuation
+  m_MixLevel: 5ebcce61e9e939d4486c1468250e88a5
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-1610959482181014985
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -34,6 +48,7 @@ AudioMixerController:
   - guids:
     - 716a8bde719b20f41b6a5c803bdef6f1
     - 1c40efa4cf925e84db3633a16d18ca47
+    - 6474a047b22935e4f9189d4b55c64e6a
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -48,6 +63,7 @@ AudioMixerGroupController:
   m_GroupID: 716a8bde719b20f41b6a5c803bdef6f1
   m_Children:
   - {fileID: 8192153328374366658}
+  - {fileID: 5447491585600923197}
   m_Volume: f3ecfe9d440d9d54a9f48a05c4412872
   m_Pitch: b591e5f6f1bd54b49b05682a2ccee75d
   m_Send: 00000000000000000000000000000000
@@ -81,8 +97,28 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 07f6c6e7313af0d4bb7ead04a3ad9ae8
   m_FloatValues:
+    3342dd3107e5c824090085d165ea01cd: 1.7477665
     9a01e57e45dac294286a457ee3da36ad: -6.133707
   m_TransitionOverrides: {}
+--- !u!243 &5447491585600923197
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: pads
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 6474a047b22935e4f9189d4b55c64e6a
+  m_Children: []
+  m_Volume: 3342dd3107e5c824090085d165ea01cd
+  m_Pitch: 2e45412ed0d734e4da3336c60f46adfc
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -7066083172648882465}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &8192153328374366658
 AudioMixerGroupController:
   m_ObjectHideFlags: 0

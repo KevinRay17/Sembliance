@@ -98,6 +98,7 @@ public class Controller : MonoBehaviour
             {
                 Physics.gravity *= 2f;
                 gravChanged = true;
+                hit.transform.GetComponent<AudioSource>().Play();
             }
 
             if (!hit.transform.gameObject.CompareTag("GravTile") && gravChanged)

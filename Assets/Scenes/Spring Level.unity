@@ -3933,6 +3933,8 @@ GameObject:
   - component: {fileID: 740508846}
   - component: {fileID: 740508845}
   - component: {fileID: 740508851}
+  - component: {fileID: 740508853}
+  - component: {fileID: 740508852}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -3978,10 +3980,16 @@ MonoBehaviour:
   RightW: {fileID: 0}
   RightB: {fileID: 0}
   started: 0
-  playerSource1: {fileID: 0}
-  playerSource2: {fileID: 0}
-  switchFx: {fileID: 0}
-  platformLandingFx: []
+  playerSource1: {fileID: 740508853}
+  playerSource2: {fileID: 740508852}
+  switchFx: {fileID: 8300000, guid: c57996b7b07185549a5c89bb4b67dc5f, type: 3}
+  deathFX: {fileID: 8300000, guid: 226a1dbaea40d7544aa31ad137c4d425, type: 3}
+  footsteps: {fileID: 8300000, guid: 5220d6b59cd3e0846afd7c1264b3890a, type: 3}
+  platformLandingFx:
+  - {fileID: 8300000, guid: ef5f4bb1a72c7594c836ec0ef11ce5bf, type: 3}
+  - {fileID: 8300000, guid: 7c20ba71fe9171647b76c7d034e0cd93, type: 3}
+  - {fileID: 8300000, guid: 394351a54bcfbb94ba8ab13e84aa63bd, type: 3}
+  - {fileID: 8300000, guid: 14d5b555824be4d408ff2a50dd917fad, type: 3}
 --- !u!136 &740508847
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4073,6 +4081,200 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!82 &740508852
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740508844}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -190118780342721698, guid: fa36e139592f953468556b71473544ed,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &740508853
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740508844}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -3204290398234196387, guid: fa36e139592f953468556b71473544ed,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: c57996b7b07185549a5c89bb4b67dc5f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &759042673
 GameObject:
   m_ObjectHideFlags: 0
@@ -12671,58 +12873,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: VoiceTrigger (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: subtitleTexts.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: voiceOverLines.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: subtitleTexts.Array.data[0]
-      value: Neurotoxin... [cough] [cough] So deadly... [cough] Choking... [laughter]
-        I'm kidding!
-      objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: subtitleTexts.Array.data[1]
-      value: When I said deadly neurotoxin, the 'deadly' was in massive sarcasm quotes.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: subtitleTexts.Array.data[2]
-      value: I could take a bath in the stuff, put it on cereal, rub it right into
-        my eyes. Honestly, it's not deadly at all. To me.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: subtitleTexts.Array.data[3]
-      value: You, on the other hand, are going to find its deadliness a lot less funny.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: voiceOverLines.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 7803761e6da877646bbaf8f58da51103, type: 3}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: voiceOverLines.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 14cef1fd4b2c9d746a87de0ac2c3b140, type: 3}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: voiceOverLines.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: ece5c4df587510f409b7da8ffc538645, type: 3}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: voiceOverLines.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 3fd3aa6b9a59160468598fcf13c61acb, type: 3}
     - target: {fileID: 7521572878500696391, guid: b52094dcd4566464aa17689a56c1704d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12778,6 +12928,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.data[0]
+      value: Neurotoxin... [cough] [cough] So deadly... [cough] Choking... [laughter]
+        I'm kidding!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.data[1]
+      value: When I said deadly neurotoxin, the 'deadly' was in massive sarcasm quotes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.data[2]
+      value: I could take a bath in the stuff, put it on cereal, rub it right into
+        my eyes. Honestly, it's not deadly at all. To me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.data[3]
+      value: You, on the other hand, are going to find its deadliness a lot less funny.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7803761e6da877646bbaf8f58da51103, type: 3}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 14cef1fd4b2c9d746a87de0ac2c3b140, type: 3}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: ece5c4df587510f409b7da8ffc538645, type: 3}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fd3aa6b9a59160468598fcf13c61acb, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b52094dcd4566464aa17689a56c1704d, type: 3}
 --- !u!1 &1679123589
@@ -12883,11 +13085,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: pauseCanvas 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4691809485765128654, guid: 0074290c7393245e98d396f032b371a5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4691809484935291371, guid: 0074290c7393245e98d396f032b371a5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12991,6 +13188,11 @@ PrefabInstance:
     - target: {fileID: 4691809484935291371, guid: 0074290c7393245e98d396f032b371a5,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691809485765128654, guid: 0074290c7393245e98d396f032b371a5,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14489,26 +14691,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2077423990}
   - component: {fileID: 2077423989}
-  - component: {fileID: 2077423988}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2077423988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077423987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9d12713c509af147a3e655157bdfcb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_IsActive: 1
 --- !u!82 &2077423989
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14518,8 +14707,9 @@ AudioSource:
   m_GameObject: {fileID: 2077423987}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a570fb7955b4e954ea967f9c02fa8dae, type: 3}
+  OutputAudioMixerGroup: {fileID: 8192153328374366658, guid: 18fdd191fe0b4a24bb29025fdfdd1eb1,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9c86acbb6e117ef4195f3f8535a2afa8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -15221,37 +15411,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: VoiceTrigger
       objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: subtitleTexts.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: voiceOverLines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: subtitleTexts.Array.data[0]
-      value: That thing you burned up isn't important to me. It's the fluid catalytic
-        cracking unit. It made shoes for orphans.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: subtitleTexts.Array.data[1]
-      value: Nice job breaking it, hero.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: voiceOverLines.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 0a10937bee408ee4a97835a7e0526336, type: 3}
-    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
-        type: 3}
-      propertyPath: voiceOverLines.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: fbb0e090794f8ff45a7016d587e39537, type: 3}
     - target: {fileID: 7521572878500696391, guid: b52094dcd4566464aa17689a56c1704d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15307,5 +15466,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.data[0]
+      value: That thing you burned up isn't important to me. It's the fluid catalytic
+        cracking unit. It made shoes for orphans.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.data[1]
+      value: Nice job breaking it, hero.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a10937bee408ee4a97835a7e0526336, type: 3}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: fbb0e090794f8ff45a7016d587e39537, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b52094dcd4566464aa17689a56c1704d, type: 3}
