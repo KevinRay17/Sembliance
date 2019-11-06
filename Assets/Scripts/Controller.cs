@@ -35,6 +35,10 @@ public class Controller : MonoBehaviour
 
     public AudioSource playerSource2;
 
+
+    //audio clip for inability to click/flip on a tile
+    public AudioClip error;
+    
     public AudioClip switchFx;
 
     public AudioClip deathFX;
@@ -84,11 +88,16 @@ public class Controller : MonoBehaviour
             StartCoroutine(JumpWait());
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            playerSource1.clip = switchFx;
-            playerSource1.Play();
-        }
+        //added error audio clip if the player is unable to flip
+        //if (Input.GetMouseButtonDown(0) /*&& CitySwap.flipPossible == true*/)
+        //{
+        
+       // }
+
+      //  else if (Input.GetMouseButtonDown(0) && CitySwap.flipPossible == false)
+       // {
+          
+      //  }
         
         //Raycast for gravity tile for infinity downwards. double and undouble gravity
         RaycastHit hit;
@@ -258,7 +267,7 @@ public class Controller : MonoBehaviour
                         GameObject leftW =Instantiate(LeftW, hit.point - new Vector3(.5f, .1f, 0), new Quaternion(0,0,0,180));
                         leftW.transform.forward = hit.normal * -1;
                         leftW.transform.parent = hit.transform.gameObject.transform;
-                        leftW.transform.localEulerAngles = new Vector3(leftW.transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
+                        leftW.transform.localEulerAngles = new Vector3(90, transform.localEulerAngles.y, -transform.localEulerAngles.z);
                         foot *= -1;
                     }
                     else
@@ -266,7 +275,7 @@ public class Controller : MonoBehaviour
                        GameObject rightW = Instantiate(RightW, hit.point + new Vector3(.5f,-.1f,0),new Quaternion(0,0,0,180));
                         rightW.transform.forward = hit.normal *-1;
                         rightW.transform.parent = hit.transform.gameObject.transform;
-                        rightW.transform.localEulerAngles = new Vector3(rightW.transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
+                        rightW.transform.localEulerAngles = new Vector3(90, transform.localEulerAngles.y, -transform.localEulerAngles.z);
                         foot *= -1;
                     }
                 }
@@ -277,7 +286,7 @@ public class Controller : MonoBehaviour
                         GameObject leftB = Instantiate(LeftB, hit.point - new Vector3(.5f, -.1f, 0), Quaternion.identity);
                         leftB.transform.forward = hit.normal * -1;
                         leftB.transform.parent = hit.transform.gameObject.transform;
-                        leftB.transform.localEulerAngles = new Vector3(leftB.transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
+                        leftB.transform.localEulerAngles = new Vector3(90, transform.localEulerAngles.y +180, transform.localEulerAngles.z);
                         foot *= -1;
                     }
                     else
@@ -285,7 +294,7 @@ public class Controller : MonoBehaviour
                         GameObject rightB = Instantiate(RightB, hit.point + new Vector3(.5f,.1f,0), Quaternion.identity);
                         rightB.transform.forward = hit.normal * -1;
                         rightB.transform.parent = hit.transform.gameObject.transform;
-                        rightB.transform.localEulerAngles = new Vector3(rightB.transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
+                        rightB.transform.localEulerAngles = new Vector3(90, transform.localEulerAngles.y+180, transform.localEulerAngles.z);
                         foot *= -1;
                     }
                 }

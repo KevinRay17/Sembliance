@@ -400,6 +400,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 8.730457
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 5.06
+      objectReference: {fileID: 0}
     - target: {fileID: 5680179939389488148, guid: 1f8dff4de86a64426a2f491c6e4c972c,
         type: 3}
       propertyPath: zDir
@@ -420,21 +435,6 @@ PrefabInstance:
       propertyPath: oppositeTileBlock
       value: 
       objectReference: {fileID: 1026668066}
-    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 8.730457
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640858464281606300, guid: 1f8dff4de86a64426a2f491c6e4c972c,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 5.06
-      objectReference: {fileID: 0}
     - target: {fileID: 1575352675245436700, guid: 1f8dff4de86a64426a2f491c6e4c972c,
         type: 3}
       propertyPath: player
@@ -1672,6 +1672,7 @@ MonoBehaviour:
   RightW: {fileID: 3263399623875293517, guid: 38a639c09d3bd0541bec5c1ad34615e0, type: 3}
   RightB: {fileID: 1419307048469461129, guid: 0f44b4c302679d4489be4e576622f4a1, type: 3}
   started: 0
+<<<<<<< HEAD
   playerSource1: {fileID: 740508853}
   playerSource2: {fileID: 740508852}
   switchFx: {fileID: 8300000, guid: c57996b7b07185549a5c89bb4b67dc5f, type: 3}
@@ -1682,6 +1683,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7c20ba71fe9171647b76c7d034e0cd93, type: 3}
   - {fileID: 8300000, guid: 394351a54bcfbb94ba8ab13e84aa63bd, type: 3}
   - {fileID: 8300000, guid: 14d5b555824be4d408ff2a50dd917fad, type: 3}
+=======
+  playerSource1: {fileID: 0}
+  playerSource2: {fileID: 0}
+  error: {fileID: 0}
+  switchFx: {fileID: 0}
+  platformLandingFx: []
+>>>>>>> 58b1f5b27a64956b70e19e9c8a43e8dc9e1fbe03
 --- !u!136 &740508847
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9372,6 +9380,16 @@ PrefabInstance:
       propertyPath: oppositeTileBlock
       value: 
       objectReference: {fileID: 1716427970}
+    - target: {fileID: 1476396721300851393, guid: 1f8dff4de86a64426a2f491c6e4c972c,
+        type: 3}
+      propertyPath: zDir
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476396721300851393, guid: 1f8dff4de86a64426a2f491c6e4c972c,
+        type: 3}
+      propertyPath: yForce
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 853361126, guid: 1f8dff4de86a64426a2f491c6e4c972c, type: 3}
       propertyPath: oppositeTileBlock
       value: 
