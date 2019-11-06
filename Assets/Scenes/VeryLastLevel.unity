@@ -2988,11 +2988,14 @@ MonoBehaviour:
   playerSource1: {fileID: 22799976}
   playerSource2: {fileID: 740508852}
   switchFx: {fileID: 8300000, guid: c57996b7b07185549a5c89bb4b67dc5f, type: 3}
+  deathFX: {fileID: 8300000, guid: 226a1dbaea40d7544aa31ad137c4d425, type: 3}
+  footsteps: {fileID: 8300000, guid: 5220d6b59cd3e0846afd7c1264b3890a, type: 3}
   platformLandingFx:
   - {fileID: 8300000, guid: ef5f4bb1a72c7594c836ec0ef11ce5bf, type: 3}
   - {fileID: 8300000, guid: 7c20ba71fe9171647b76c7d034e0cd93, type: 3}
   - {fileID: 8300000, guid: 394351a54bcfbb94ba8ab13e84aa63bd, type: 3}
   - {fileID: 8300000, guid: 14d5b555824be4d408ff2a50dd917fad, type: 3}
+  Error: {fileID: 8300000, guid: e825960e6f3dc954cbe191c05cef0c63, type: 3}
 --- !u!136 &740508847
 CapsuleCollider:
   m_ObjectHideFlags: 0

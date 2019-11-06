@@ -15,6 +15,7 @@ TagManager:
   - SideGrav
   - Feet
   - PlayerCanvas
+  - VoiceTrigger
   layers:
   - Default
   - TransparentFX
