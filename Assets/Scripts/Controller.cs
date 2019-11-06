@@ -187,6 +187,9 @@ public class Controller : MonoBehaviour
                 else
                     Physics.gravity = new Vector3(0, 9.8f, 0);
             }
+        } else if (other.gameObject.CompareTag("VoiceTrigger"))
+        {
+            DialogueManager.instance.PlayVoice();
         }
     }
 

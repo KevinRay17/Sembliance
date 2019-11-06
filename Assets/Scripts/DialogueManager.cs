@@ -6,6 +6,7 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager instance;
     public TextMeshProUGUI subtitles;
     public AudioSource source;
 
@@ -27,6 +28,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         //if (!triggersSetUp)
         //{
         //    triggersSetUp = true;
