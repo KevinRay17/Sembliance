@@ -3448,7 +3448,7 @@ MonoBehaviour:
   started: 0
   playerSource1: {fileID: 1007506588}
   playerSource2: {fileID: 1007506589}
-  error: {fileID: 0}
+  error: {fileID: 8300000, guid: e825960e6f3dc954cbe191c05cef0c63, type: 3}
   switchFx: {fileID: 8300000, guid: c57996b7b07185549a5c89bb4b67dc5f, type: 3}
   deathFX: {fileID: 8300000, guid: 226a1dbaea40d7544aa31ad137c4d425, type: 3}
   footsteps: {fileID: 8300000, guid: 5220d6b59cd3e0846afd7c1264b3890a, type: 3}

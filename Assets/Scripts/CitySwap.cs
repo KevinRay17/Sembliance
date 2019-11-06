@@ -66,7 +66,7 @@ public class CitySwap : MonoBehaviour
                 flipPossible = false;
                 if (!FlipUI.instance.failing)
                 StartCoroutine(FlipUI.instance.failFlip());
-                Controller.instance.playerSource1.clip = Controller.instance.error;
+                Controller.instance.playerSource1.clip = Controller.instance.Error;
                 Controller.instance.playerSource1.Play();
 
             }
