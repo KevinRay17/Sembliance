@@ -57,5 +57,13 @@ public class SunIntensity : MonoBehaviour
     {
         SceneManager.LoadScene(9);
         SceneManagerScript.nextScene += 1;
+
     }
+//IEnumerator FadeTime()
+  //  {
+    //    StartCoroutine(GameObject.Find("Music").gameObject.GetComponent<MusicFade>().FadeOut());
+      //  yield return new WaitForSeconds(1.5f);
+        //SceneManager.LoadScene(9);
+        //SceneManagerScript.nextScene += 1;
+    //}
 }

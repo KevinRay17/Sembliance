@@ -10,15 +10,27 @@ public class IntermissionAnimatedText : MonoBehaviour
 {
     public Text start;
     private string str;
-    public static int lastScene;
+
     
     public TextMeshProUGUI intermissiontmpro;
 
     void Start()
     {
-        lastScene = SceneManager.GetActiveScene().buildIndex - 1;
+       
         StartCoroutine(AnimateText("Level Complete"));
-    }
+
+        if (MusicFade.lastScene == 1)
+        {
+            
+            var knifeThrow = Resources.Load<AudioClip>("dialogue/int1");
+            AudioManager.instance.PlaySound(knifeThrow);
+        }
+        if (MusicFade.lastScene == 2)
+        {
+            var knifeThrow = Resources.Load<AudioClip>("dialogue/int1");
+            AudioManager.instance.PlaySound(knifeThrow);
+        }
+        }
 
     private void Update()
     {
@@ -64,7 +76,7 @@ public class IntermissionAnimatedText : MonoBehaviour
         }
 
         yield return new WaitForSeconds(3f);
-        StartCoroutine(AnimateText3("Welcome"));
+        StartCoroutine(AnimateText3("Initialization Complete"));
 
     }
     IEnumerator AnimateText3(string strComplete)
@@ -78,8 +90,8 @@ public class IntermissionAnimatedText : MonoBehaviour
             str += strComplete[i++];
             yield return new WaitForSeconds(0.1F);
         }
-
-        yield return new WaitForSeconds(1f);
+        StartCoroutine(GameObject.Find("Music").gameObject.GetComponent<MusicFade>().FadeOut());
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(SceneManagerScript.nextScene);
 
     }

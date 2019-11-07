@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestroy : MonoBehaviour
+public class DontDestroyMusic : MonoBehaviour
 {
-    private static DontDestroy instance = null;
+    private static DontDestroyMusic instance = null;
 
-    public static DontDestroy Instance
+    public static DontDestroyMusic Instance
     {
         get { return instance; }
     }

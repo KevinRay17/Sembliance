@@ -33,7 +33,8 @@ public class StartAnimatedText : MonoBehaviour
         int i = 0;
         str = "";
         yield return new WaitForSeconds(2);
-
+        var knifeThrow = Resources.Load<AudioClip>("dialogue/dialogue1");
+        AudioManager.instance.PlaySound(knifeThrow);
 
         while (i < strComplete.Length)
         {
@@ -41,7 +42,7 @@ public class StartAnimatedText : MonoBehaviour
             yield return new WaitForSeconds(0.1F);
         }
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3.5f);
         StartCoroutine(AnimateText2("Constructing Simulation..."));
 
     }
@@ -49,16 +50,16 @@ public class StartAnimatedText : MonoBehaviour
     {
         int i = 0;
         str = "";
-        
 
 
+       
         while (i < strComplete.Length)
         {
             str += strComplete[i++];
             yield return new WaitForSeconds(0.1F);
         }
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3.5f);
         StartCoroutine(AnimateText3("Welcome"));
 
     }
@@ -73,8 +74,9 @@ public class StartAnimatedText : MonoBehaviour
             str += strComplete[i++];
             yield return new WaitForSeconds(0.1F);
         }
-
-        yield return new WaitForSeconds(1f);
+        StartCoroutine(GameObject.Find("Music").gameObject.GetComponent<MusicFade>().FadeOut());
+        yield return new WaitForSeconds(2f);
+        
         SceneManager.LoadScene(1);
 
     }

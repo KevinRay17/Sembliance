@@ -47,11 +47,14 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!source.isPlaying)
+        if (source != null)
         {
-            subtitles.text = "";
-            panelShort.enabled = false;
-            panelTall.enabled = false;
+            if (!source.isPlaying)
+            {
+                subtitles.text = "";
+                panelShort.enabled = false;
+                panelTall.enabled = false;
+            }
         }
 
         PlayVoice();
@@ -61,7 +64,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentLine < voiceOverLines.Count && !source.isPlaying)
         {
-            subtitles.text = subtitleTexts[currentLine];
+           // subtitles.text = subtitleTexts[currentLine];
             source.clip = voiceOverLines[currentLine];
             source.Play();
             
@@ -69,16 +72,16 @@ public class DialogueManager : MonoBehaviour
             //char[] characters = subtitleTexts[currentLine].ToCharArray();
             //print(characters.Length);
 
-            if (subtitles.isTextOverflowing)
-            {
-                panelTall.enabled = false;
-                panelShort.enabled = true;
-            }
-            else
-            {
-                panelTall.enabled = true;
-                panelShort.enabled = false;
-            }
+            //if (subtitles.isTextOverflowing)
+            //{
+              //  panelTall.enabled = false;
+                //panelShort.enabled = true;
+            //}
+            //else
+            //{
+              //  panelTall.enabled = true;
+                //panelShort.enabled = false;
+            //}
             currentLine++;
         }
     }

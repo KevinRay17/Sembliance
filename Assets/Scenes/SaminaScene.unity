@@ -353,11 +353,12 @@ PrefabInstance:
         type: 3}
       propertyPath: voiceOverLines.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 28120007a2e753649ad7641da1886b60, type: 3}
+      objectReference: {fileID: 8300000, guid: 923def88f22a29e439464e56ac695e7b, type: 3}
     - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
         type: 3}
       propertyPath: subtitleTexts.Array.data[0]
-      value: Move to sun.
+      value: 'Please walk towards the light. Reaching it is your goal.  Jump between
+        platforms in order to accomplish this. '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b52094dcd4566464aa17689a56c1704d, type: 3}
@@ -762,7 +763,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.66
+  m_Radius: 0.55
   m_Center: {x: -0.010073379, y: 0, z: 0}
 --- !u!23 &91371402
 MeshRenderer:
@@ -817,7 +818,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91371400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 62.5, z: 121.6}
+  m_LocalPosition: {x: 0, y: 62.5, z: 120.2}
   m_LocalScale: {x: 23.97, y: 23.97, z: 23.97}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3805,7 +3806,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 18fdd191fe0b4a24bb29025fdfdd1eb1,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 031a821407f884742a6d77b2e98acd5b, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8905,6 +8906,36 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &807472617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7144132798375674133, guid: b8c06723c74b6a045a0833be9bccbb81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1431997731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &807472618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807472617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f738f576b0d974a8bb5ac70561022c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &807472621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807472617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e71702771977f643a1c218c389339a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &836227149
 GameObject:
   m_ObjectHideFlags: 0
@@ -11254,6 +11285,86 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0
+--- !u!1001 &1431997731
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7144132798375674133, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674134, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -39.226562
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674134, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.4570312
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674134, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 292.60938
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674134, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674134, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674134, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674134, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674134, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674134, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674134, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674134, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144132798375674135, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 031a821407f884742a6d77b2e98acd5b, type: 3}
+    - target: {fileID: 7144132798375674135, guid: b8c06723c74b6a045a0833be9bccbb81,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: fa36e139592f953468556b71473544ed,
+        type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8c06723c74b6a045a0833be9bccbb81, type: 3}
 --- !u!1 &1439511660
 GameObject:
   m_ObjectHideFlags: 0
@@ -11974,7 +12085,7 @@ PrefabInstance:
     - target: {fileID: 7521572878500696391, guid: b52094dcd4566464aa17689a56c1704d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 80
+      value: 69.8
       objectReference: {fileID: 0}
     - target: {fileID: 7521572878500696391, guid: b52094dcd4566464aa17689a56c1704d,
         type: 3}
@@ -12035,6 +12146,28 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b63465fa5aad24a4b83709afd46bf5b5, type: 3}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.data[0]
+      value: 'You may notice that these cities are slowly moving toward one another.   If
+        you take too long to complete a level, the cities close the gap between them
+        and prevent you from attaining your destination. '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b52094dcd4566464aa17689a56c1704d, type: 3}
@@ -12226,6 +12359,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: voiceOverLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: bc8a713a6da9b1d4b9a5c5f39a2b00fc, type: 3}
+    - target: {fileID: 7521572878500696388, guid: b52094dcd4566464aa17689a56c1704d,
+        type: 3}
+      propertyPath: subtitleTexts.Array.data[0]
+      value: 'If you find yourself at an impasse, simply reverse your polarity to
+        the opposite city. '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b52094dcd4566464aa17689a56c1704d, type: 3}

@@ -23,6 +23,8 @@ public class Controller : MonoBehaviour
     public GameObject LeftB;
     public GameObject RightW;
     public GameObject RightB;
+
+    GameObject lastGrav;
     
     private Rigidbody rb;
 
@@ -90,15 +92,18 @@ public class Controller : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, Mathf.Infinity)){
 
+           
            if (hit.transform.gameObject.CompareTag("GravTile") && !gravChanged)
             {
                 Physics.gravity *= 2f;
                 gravChanged = true;
                 hit.transform.GetComponent<AudioSource>().Play();
+                lastGrav = hit.transform.gameObject;
             }
 
             if (!hit.transform.gameObject.CompareTag("GravTile") && gravChanged)
             {
+                lastGrav.GetComponent<AudioSource>().Stop();
                 Physics.gravity /= 2f;
                 gravChanged = false;
             }

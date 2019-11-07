@@ -10,7 +10,7 @@ public class SubtitleDisplay : MonoBehaviour
     public AudioClip[] voiceOverLines;
 
     public bool triggered;
-
+    public GameObject glitch;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +48,18 @@ public class SubtitleDisplay : MonoBehaviour
 
             //find index of this trigger in manager.voice triggers
             //set the boolean at that same index in the isVoiceTriggered array to true
+
+
+
+
+        //GLitch
+        if (gameObject.CompareTag("GlitchTrigger"))
+            {
+                glitch.SetActive(true);
+            }
+
+
+
         }
     }
 }

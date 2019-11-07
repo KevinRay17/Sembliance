@@ -38,8 +38,8 @@ public class CityScaler : MonoBehaviour
 
         // if city collides, stop scaling
         RaycastHit hit;
-        Debug.DrawRay(child.transform.position, transform.TransformDirection(Vector3.up) * transform.localScale.y*5,
-            Color.yellow);
+       // Debug.DrawRay(child.transform.position, transform.TransformDirection(Vector3.up) * transform.localScale.y*5,
+          //  Color.yellow);
         
         if (Physics.Raycast(child.transform.position, transform.TransformDirection(Vector3.up), out hit, (transform.localScale.y *5), layerMask) 
             && gameObject.CompareTag("CityWhite"))

@@ -16,6 +16,8 @@ TagManager:
   - Feet
   - PlayerCanvas
   - VoiceTrigger
+  - GlitchTrigger
+  - Glitch
   layers:
   - Default
   - TransparentFX
