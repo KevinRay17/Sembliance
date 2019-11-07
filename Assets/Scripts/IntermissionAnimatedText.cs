@@ -10,11 +10,13 @@ public class IntermissionAnimatedText : MonoBehaviour
 {
     public Text start;
     private string str;
+    public static int lastScene;
     
     public TextMeshProUGUI intermissiontmpro;
 
     void Start()
     {
+        lastScene = SceneManager.GetActiveScene().buildIndex - 1;
         StartCoroutine(AnimateText("Level Complete"));
     }
 
