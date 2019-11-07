@@ -55,8 +55,14 @@ public class SunIntensity : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        SceneManager.LoadScene(9);
-        SceneManagerScript.nextScene += 1;
+        if (SceneManagerScript.nextScene == 8)
+        {
+            SceneManager.LoadScene(8);
+        } else {
+            SceneManager.LoadScene(9);
+            SceneManagerScript.nextScene += 1;
+        
+            }
 
     }
 //IEnumerator FadeTime()

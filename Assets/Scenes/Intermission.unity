@@ -595,6 +595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Glitch
       objectReference: {fileID: 0}
+    - target: {fileID: 6501185341282278255, guid: 93db991d6b1d8d643a0b88af8134f839,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6501185341282278251, guid: 93db991d6b1d8d643a0b88af8134f839,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -652,6 +657,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93db991d6b1d8d643a0b88af8134f839, type: 3}
+--- !u!1 &333023105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6501185341282278255, guid: 93db991d6b1d8d643a0b88af8134f839,
+    type: 3}
+  m_PrefabInstance: {fileID: 333023104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1028378112
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 0}
   intermissiontmpro: {fileID: 284909742}
+  glitch: {fileID: 333023105}
 --- !u!1 &1868045769
 GameObject:
   m_ObjectHideFlags: 0

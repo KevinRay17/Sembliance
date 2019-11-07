@@ -17,19 +17,19 @@ public class IntermissionAnimatedText : MonoBehaviour
 
     void Start()
     {
-       
+
         StartCoroutine(AnimateText("Level Complete"));
 
         if (MusicFade.lastScene == 1)
         {
-            
+
             var knifeThrow = Resources.Load<AudioClip>("dialogue/int1");
             AudioManager.instance.PlaySound(knifeThrow);
         }
-      //  if (MusicFade.lastScene == 2)
+        //  if (MusicFade.lastScene == 2)
         //{
-          //  var knifeThrow = Resources.Load<AudioClip>("dialogue/int1");
-            //AudioManager.instance.PlaySound(knifeThrow);
+        //  var knifeThrow = Resources.Load<AudioClip>("dialogue/int1");
+        //AudioManager.instance.PlaySound(knifeThrow);
         //}
         if (MusicFade.lastScene == 3)
         {
@@ -40,8 +40,9 @@ public class IntermissionAnimatedText : MonoBehaviour
         {
             glitch.SetActive(true);
         }
+    }
 
-    private void Update()
+    void Update()
     {
         intermissiontmpro.text = str;
         if (Input.GetKeyDown(KeyCode.R))
