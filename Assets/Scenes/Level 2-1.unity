@@ -924,11 +924,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1151423246}
     m_Modifications:
-    - target: {fileID: 365118008633116939, guid: 81460293908a02d49aef9a278545f662,
-        type: 3}
-      propertyPath: m_Name
-      value: Speed
-      objectReference: {fileID: 0}
     - target: {fileID: 3382157351898097301, guid: 81460293908a02d49aef9a278545f662,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -983,6 +978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365118008633116939, guid: 81460293908a02d49aef9a278545f662,
+        type: 3}
+      propertyPath: m_Name
+      value: Speed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81460293908a02d49aef9a278545f662, type: 3}
@@ -1353,6 +1353,18 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4691809485560051717, guid: 0074290c7393245e98d396f032b371a5,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 6c5d56cb376eb954aa6b5d4076901b88,
+        type: 3}
+    - target: {fileID: 4691809485740464312, guid: 0074290c7393245e98d396f032b371a5,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 6c5d56cb376eb954aa6b5d4076901b88,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0074290c7393245e98d396f032b371a5, type: 3}
 --- !u!4 &474257786 stripped
