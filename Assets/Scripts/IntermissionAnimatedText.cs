@@ -13,6 +13,7 @@ public class IntermissionAnimatedText : MonoBehaviour
 
     
     public TextMeshProUGUI intermissiontmpro;
+    public GameObject glitch;
 
     void Start()
     {
@@ -25,11 +26,19 @@ public class IntermissionAnimatedText : MonoBehaviour
             var knifeThrow = Resources.Load<AudioClip>("dialogue/int1");
             AudioManager.instance.PlaySound(knifeThrow);
         }
-        if (MusicFade.lastScene == 2)
+      //  if (MusicFade.lastScene == 2)
+        //{
+          //  var knifeThrow = Resources.Load<AudioClip>("dialogue/int1");
+            //AudioManager.instance.PlaySound(knifeThrow);
+        //}
+        if (MusicFade.lastScene == 3)
         {
-            var knifeThrow = Resources.Load<AudioClip>("dialogue/int1");
+            var knifeThrow = Resources.Load<AudioClip>("dialogue/dialogue8_1");
             AudioManager.instance.PlaySound(knifeThrow);
         }
+        if (MusicFade.lastScene == 4)
+        {
+            glitch.SetActive(true);
         }
 
     private void Update()
