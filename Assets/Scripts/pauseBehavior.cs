@@ -28,7 +28,9 @@ public class pauseBehavior : MonoBehaviour
     public void ActivateMenu()
     {
         GameObject camera = GameObject.FindWithTag("MainCamera");
+        GameObject player = GameObject.FindWithTag("Player");
         camera.GetComponent<MouseLook>().enabled = false;
+        player.GetComponent<CitySwap>().enabled = false;
         Time.timeScale = 0;
         AudioListener.pause = true;
         paused.SetActive(true);
@@ -39,8 +41,10 @@ public class pauseBehavior : MonoBehaviour
     public void DeactivateMenu()
     {
         GameObject camera = GameObject.FindWithTag("MainCamera");
+        GameObject player = GameObject.FindWithTag("Player");
         Time.timeScale = 1;
         camera.GetComponent<MouseLook>().enabled = true;
+        player.GetComponent<CitySwap>().enabled = true;
         AudioListener.pause = false;
         paused.SetActive(false);
         isPaused = false;
