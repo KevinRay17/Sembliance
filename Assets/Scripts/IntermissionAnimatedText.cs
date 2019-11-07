@@ -26,11 +26,11 @@ public class IntermissionAnimatedText : MonoBehaviour
             var knifeThrow = Resources.Load<AudioClip>("dialogue/int1");
             AudioManager.instance.PlaySound(knifeThrow);
         }
-        //  if (MusicFade.lastScene == 2)
-        //{
-        //  var knifeThrow = Resources.Load<AudioClip>("dialogue/int1");
-        //AudioManager.instance.PlaySound(knifeThrow);
-        //}
+         if (MusicFade.lastScene == 2)
+        {
+          var knifeThrow = Resources.Load<AudioClip>("dialogue/int3");
+        AudioManager.instance.PlaySound(knifeThrow);
+        }
         if (MusicFade.lastScene == 3)
         {
             var knifeThrow = Resources.Load<AudioClip>("dialogue/dialogue8_1");

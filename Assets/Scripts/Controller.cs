@@ -52,6 +52,7 @@ public class Controller : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         instance = this;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         //points = 0;
         //pointText.text = "Points:" + points.ToString ();
     }
