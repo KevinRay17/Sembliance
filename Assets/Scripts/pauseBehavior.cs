@@ -21,6 +21,7 @@ public class pauseBehavior : MonoBehaviour
         GameObject camera = GameObject.FindWithTag("MainCamera");
         if (Input.GetKeyDown("escape"))
         {
+            Cursor.visible = true;
             ActivateMenu();
         }
     }
@@ -40,6 +41,7 @@ public class pauseBehavior : MonoBehaviour
     
     public void DeactivateMenu()
     {
+        Cursor.visible = false;
         GameObject camera = GameObject.FindWithTag("MainCamera");
         GameObject player = GameObject.FindWithTag("Player");
         Time.timeScale = 1;
