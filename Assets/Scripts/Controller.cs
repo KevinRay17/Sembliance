@@ -85,11 +85,6 @@ public class Controller : MonoBehaviour
             jumpWaited = false;
             StartCoroutine(JumpWait());
         }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-
-        }
         
         //Raycast for gravity tile for infinity downwards. double and undouble gravity
         RaycastHit hit;
